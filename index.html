@@ -6,53 +6,49 @@
     <title>Protos Electrical | Professional Electrical Services</title>
     <meta
       name="description"
-      content="Protos Electrical provides residential, commercial, and maintenance electrical services with a focus on safety, quality, and dependable workmanship."
+      content="Protos Electrical delivers residential, commercial, and maintenance electrical services across Ontario."
     />
     <meta
       name="keywords"
-      content="electrician, electrical contractor, commercial electrical, residential electrical, maintenance, switchboards, Protos Electrical"
+      content="electrician, electrical contractor, residential electrical, commercial electrical, maintenance, Protos Electrical"
     />
-    <meta name="theme-color" content="#0f172a" />
+    <meta name="theme-color" content="#050505" />
     <link rel="icon" type="image/png" href="assets/protos-logo.png" />
     <meta property="og:title" content="Protos Electrical" />
-    <meta
-      property="og:description"
-      content="Professional electrical services for homes, businesses, and property managers in Ontario."
-    />
+    <meta property="og:description" content="Electrical services for homes, facilities, and commercial projects." />
     <meta property="og:type" content="website" />
     <style>
       :root {
-        --navy: #0f172a;
-        --navy-strong: #111827;
-        --slate: #475569;
-        --muted: #64748b;
-        --line: #e2e8f0;
-        --paper: #f8fafc;
-        --paper-strong: #f1f5f9;
-        --white: #ffffff;
-        --accent: #0f766e;
-        --accent-strong: #115e59;
-        --accent-soft: #d1fae5;
-        --amber: #f59e0b;
-        --shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
-        --radius: 20px;
+        --bg: #050505;
+        --bg-2: #0d0d0d;
+        --panel: #111111;
+        --panel-strong: #171717;
+        --line: #262626;
+        --text: #f3f3f3;
+        --muted: #a1a1a1;
+        --muted-2: #7a7a7a;
+        --accent: #7dff6a;
+        --accent-strong: #50d952;
+        --accent-soft: rgba(125, 255, 106, 0.12);
+        --shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+        --radius: 18px;
       }
 
       * { box-sizing: border-box; }
 
-      html {
-        scroll-behavior: smooth;
-      }
+      html { scroll-behavior: smooth; }
 
       body {
         margin: 0;
         font-family: Arial, Helvetica, sans-serif;
-        background: var(--paper);
-        color: var(--navy);
-        line-height: 1.6;
+        background:
+          radial-gradient(circle at top, rgba(125, 255, 106, 0.12), transparent 22%),
+          var(--bg);
+        color: var(--text);
+        line-height: 1.55;
       }
 
-      img { max-width: 100%; display: block; }
+      img { display: block; max-width: 100%; }
 
       a {
         color: inherit;
@@ -61,362 +57,295 @@
 
       p {
         margin: 0 0 1rem;
-        color: var(--slate);
+        color: var(--muted);
       }
 
       h1, h2, h3 {
-        margin: 0 0 1rem;
-        line-height: 1.1;
-        color: var(--navy-strong);
+        margin: 0 0 0.8rem;
+        line-height: 1.04;
+        letter-spacing: -0.05em;
+        color: var(--text);
       }
 
       .container {
-        width: min(1160px, calc(100% - 2rem));
+        width: min(1180px, calc(100% - 2rem));
         margin: 0 auto;
       }
 
       .topbar {
-        background: var(--navy);
-        color: var(--white);
-        font-size: 0.8rem;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
+        border-bottom: 1px solid var(--line);
+        background: rgba(10, 10, 10, 0.9);
       }
 
       .topbar-inner {
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
         gap: 1rem;
         min-height: 42px;
+        font-size: 0.72rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted);
       }
 
       .topbar-meta {
         display: flex;
-        flex-wrap: wrap;
+        align-items: center;
         gap: 1rem;
-        color: rgba(255,255,255,0.8);
-      }
-
-      .topbar-meta a {
-        color: var(--white);
+        flex-wrap: wrap;
       }
 
       .site-header {
         position: sticky;
         top: 0;
         z-index: 100;
-        background: rgba(255,255,255,0.92);
         backdrop-filter: blur(12px);
-        border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+        background: rgba(5, 5, 5, 0.86);
+        border-bottom: 1px solid var(--line);
       }
 
       .header-inner {
         display: flex;
-        align-items: center;
         justify-content: space-between;
-        min-height: 86px;
+        align-items: center;
         gap: 1rem;
+        min-height: 84px;
       }
 
       .brand {
         display: inline-flex;
         align-items: center;
-        gap: 0.8rem;
+        min-width: 0;
       }
 
       .brand-mark {
-        width: min(260px, 52vw);
+        width: min(280px, 52vw);
         height: auto;
-        display: block;
-        object-fit: contain;
-      }
-
-      .brand-text {
-        display: none;
-      }
-
-      .brand-name {
-        display: none;
-      }
-
-      .brand-tag {
-        display: none;
+        filter: drop-shadow(0 0 18px rgba(125, 255, 106, 0.18));
       }
 
       .main-nav {
         display: flex;
         align-items: center;
         gap: 1.4rem;
-        font-size: 0.9rem;
-        font-weight: 700;
+        font-size: 0.76rem;
         text-transform: uppercase;
-        letter-spacing: 0.06em;
-        color: var(--slate);
-      }
-
-      .main-nav a {
-        transition: color 0.2s ease;
+        letter-spacing: 0.12em;
+        color: var(--muted);
       }
 
       .main-nav a:hover,
       .main-nav a:focus-visible {
-        color: var(--accent);
+        color: var(--text);
       }
 
-      .nav-cta {
+      .nav-cta,
+      .button {
         display: inline-flex;
         align-items: center;
         justify-content: center;
         min-height: 48px;
-        padding: 0.8rem 1.4rem;
+        padding: 0.9rem 1.4rem;
         border-radius: 999px;
-        background: var(--accent);
-        color: var(--white);
-        font-weight: 700;
+        border: 1px solid transparent;
+        font-size: 0.76rem;
+        letter-spacing: 0.12em;
         text-transform: uppercase;
-        letter-spacing: 0.08em;
-        font-size: 0.78rem;
-        box-shadow: 0 12px 25px rgba(15, 118, 110, 0.18);
+        font-weight: 700;
+        transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+      }
+
+      .nav-cta,
+      .button-primary {
+        background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+        color: #0a0a0a;
+        box-shadow: 0 20px 32px rgba(116, 248, 116, 0.12);
+      }
+
+      .button-secondary {
+        border-color: var(--line);
+        background: transparent;
+        color: var(--text);
+      }
+
+      .nav-cta:hover,
+      .button:hover,
+      .nav-cta:focus-visible,
+      .button:focus-visible {
+        transform: translateY(-1px);
       }
 
       .hero {
-        padding: 4rem 0 3.5rem;
-        background: linear-gradient(180deg, rgba(15, 118, 110, 0.06) 0%, rgba(255,255,255,0) 100%);
+        padding: 4rem 0 3rem;
       }
 
       .hero-grid {
         display: grid;
-        grid-template-columns: 1.15fr 0.85fr;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 2rem;
         align-items: center;
-        gap: 3rem;
       }
 
       .eyebrow {
         display: inline-block;
         margin-bottom: 1rem;
         color: var(--accent);
-        font-size: 0.78rem;
-        font-weight: 800;
+        font-size: 0.72rem;
         letter-spacing: 0.16em;
         text-transform: uppercase;
+        font-weight: 700;
       }
 
       h1 {
-        font-size: clamp(2.5rem, 4vw, 4.5rem);
-        max-width: 620px;
-        letter-spacing: -0.05em;
+        font-size: clamp(2.7rem, 5vw, 5.1rem);
+        max-width: 560px;
       }
 
       .hero-copy {
-        font-size: 1.12rem;
-        max-width: 620px;
-        margin-bottom: 2rem;
+        font-size: 1.06rem;
+        max-width: 580px;
+        margin-bottom: 1.7rem;
       }
 
       .hero-actions {
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
-        gap: 1rem;
+        gap: 0.9rem;
         margin-bottom: 2rem;
       }
 
-      .button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 52px;
-        padding: 0.9rem 1.6rem;
-        border-radius: 999px;
-        border: 1px solid transparent;
-        font-weight: 800;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-        font-size: 0.8rem;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-      }
-
-      .button:hover,
-      .button:focus-visible {
-        transform: translateY(-1px);
-      }
-
-      .button-primary {
-        background: var(--accent);
-        color: var(--white);
-        box-shadow: 0 15px 28px rgba(15, 118, 110, 0.18);
-      }
-
-      .button-secondary {
-        background: transparent;
-        border-color: var(--line);
-        color: var(--navy);
-      }
-
-      .hero-stats {
+      .stats {
         display: flex;
         flex-wrap: wrap;
-        gap: 1.25rem;
+        gap: 1.2rem;
       }
 
       .stat {
-        min-width: 130px;
+        min-width: 120px;
       }
 
       .stat strong {
         display: block;
-        font-size: clamp(1.5rem, 2vw, 2rem);
-        color: var(--navy-strong);
+        font-size: clamp(1.5rem, 2vw, 2.1rem);
+        color: var(--text);
       }
 
       .stat span {
-        color: var(--muted);
-        font-size: 0.82rem;
+        font-size: 0.72rem;
+        letter-spacing: 0.12em;
         text-transform: uppercase;
-        letter-spacing: 0.08em;
-      }
-
-      .hero-visual {
-        position: relative;
+        color: var(--muted);
       }
 
       .visual-card {
-        background: linear-gradient(135deg, var(--navy), #1f2937 60%, #0f172a 100%);
-        border-radius: 30px;
-        padding: 1.5rem;
-        color: var(--white);
+        background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        padding: 1rem;
         box-shadow: var(--shadow);
-        overflow: hidden;
       }
 
       .visual-panel {
         position: relative;
-        min-height: 430px;
-        background:
-          linear-gradient(135deg, rgba(15, 118, 110, 0.25), rgba(255, 255, 255, 0.02)),
-          url('https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+        min-height: 500px;
         border-radius: 22px;
-        display: flex;
-        align-items: flex-end;
+        overflow: hidden;
+        background:
+          linear-gradient(135deg, rgba(0,0,0,0.28), rgba(0,0,0,0.5)),
+          url('https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
       }
 
-      .panel-badge {
+      .visual-tag {
         position: absolute;
-        top: 1.25rem;
-        right: 1.25rem;
-        background: rgba(255,255,255,0.14);
-        border: 1px solid rgba(255,255,255,0.18);
-        color: var(--white);
+        right: 1.3rem;
+        top: 1.3rem;
+        background: rgba(10,10,10,0.7);
+        border: 1px solid rgba(255,255,255,0.12);
+        color: var(--text);
         border-radius: 999px;
-        padding: 0.55rem 0.8rem;
-        font-weight: 700;
-        font-size: 0.72rem;
-        letter-spacing: 0.08em;
+        padding: 0.5rem 0.8rem;
+        font-size: 0.68rem;
+        letter-spacing: 0.12em;
         text-transform: uppercase;
       }
 
-      .panel-box {
-        width: calc(100% - 2rem);
-        margin: 1rem;
-        background: rgba(255,255,255,0.12);
-        border: 1px solid rgba(255,255,255,0.18);
-        backdrop-filter: blur(6px);
-        border-radius: 20px;
+      .visual-box {
+        position: absolute;
+        left: 1.2rem;
+        right: 1.2rem;
+        bottom: 1.2rem;
+        background: rgba(6, 6, 6, 0.72);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 18px;
         padding: 1rem 1.1rem;
       }
 
-      .mini-label {
+      .visual-box span {
         display: block;
-        font-size: 0.7rem;
+        color: var(--muted);
+        font-size: 0.65rem;
         letter-spacing: 0.12em;
         text-transform: uppercase;
-        color: rgba(255,255,255,0.74);
-        margin-bottom: 0.3rem;
       }
 
-      .mini-title {
-        font-size: 1.6rem;
-        font-weight: 800;
-        letter-spacing: -0.04em;
-      }
-
-      .mini-detail {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 0.7rem;
-        color: rgba(255,255,255,0.8);
-        font-size: 0.82rem;
-      }
-
-      .quality-bar {
-        margin-top: 1rem;
-        height: 8px;
-        background: rgba(255,255,255,0.12);
-        border-radius: 999px;
-        overflow: hidden;
-      }
-
-      .quality-bar span {
+      .visual-box strong {
         display: block;
-        width: 94%;
-        height: 100%;
-        background: linear-gradient(90deg, var(--accent-soft), #34d399);
-        border-radius: inherit;
+        margin-top: 0.35rem;
+        font-size: clamp(1.7rem, 2vw, 2.5rem);
+        letter-spacing: -0.05em;
       }
 
       .trust-strip {
-        background: var(--navy);
-        color: var(--white);
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        background: var(--panel);
       }
 
       .trust-grid {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 1px;
-        background: rgba(255,255,255,0.08);
+        background: var(--line);
       }
 
       .trust-item {
-        background: rgba(15, 23, 42, 0.92);
+        background: var(--panel);
         padding: 1.2rem 1rem;
         text-align: center;
       }
 
       .trust-item strong {
         display: block;
-        margin-bottom: 0.25rem;
-        font-size: 1.1rem;
+        font-size: 1rem;
+        color: var(--text);
       }
 
       .trust-item span {
-        color: rgba(255,255,255,0.72);
-        font-size: 0.74rem;
+        color: var(--muted);
+        font-size: 0.68rem;
+        letter-spacing: 0.12em;
         text-transform: uppercase;
-        letter-spacing: 0.08em;
       }
 
       .section {
-        padding: 5rem 0;
+        padding: 4.5rem 0;
       }
 
       .section-header {
-        max-width: 720px;
-        margin-bottom: 2.2rem;
+        max-width: 760px;
+        margin-bottom: 2rem;
       }
 
       .section-header h2 {
-        font-size: clamp(2rem, 3vw, 3rem);
-        letter-spacing: -0.05em;
+        font-size: clamp(2.2rem, 3.3vw, 3.3rem);
       }
 
       .services-grid,
       .project-grid,
-      .process-grid,
-      .feature-grid {
+      .process-grid {
         display: grid;
-        gap: 1.25rem;
+        gap: 1.2rem;
       }
 
       .services-grid {
@@ -425,74 +354,40 @@
 
       .service-card,
       .project-card,
-      .process-card,
-      .feature-box {
-        background: var(--white);
+      .process-card {
+        background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
         border: 1px solid var(--line);
         border-radius: var(--radius);
         padding: 1.4rem;
-        box-shadow: 0 10px 25px rgba(15, 23, 42, 0.03);
+        box-shadow: var(--shadow);
       }
 
       .icon-wrap {
-        width: 54px;
-        height: 54px;
+        width: 52px;
+        height: 52px;
         display: grid;
         place-items: center;
+        border-radius: 12px;
         background: var(--accent-soft);
-        color: var(--accent-strong);
-        border-radius: 16px;
+        border: 1px solid rgba(125, 255, 106, 0.2);
         margin-bottom: 1rem;
-        font-size: 1.35rem;
+        font-size: 1.3rem;
       }
 
       .service-card h3,
       .project-card h3,
-      .process-card h3,
-      .feature-box h3 {
-        font-size: 1.35rem;
-        margin-bottom: 0.65rem;
+      .process-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.7rem;
       }
 
       .service-card ul {
-        margin: 1rem 0 0;
-        padding-left: 1.1rem;
-        color: var(--slate);
+        margin: 0.9rem 0 0;
+        padding-left: 1.2rem;
+        color: var(--muted);
       }
 
-      .service-card li + li {
-        margin-top: 0.35rem;
-      }
-
-      .about-wrap {
-        display: grid;
-        grid-template-columns: 1.08fr 0.92fr;
-        gap: 2rem;
-      }
-
-      .about-box,
-      .contact-box {
-        background: var(--white);
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
-        padding: 1.6rem;
-        box-shadow: 0 10px 25px rgba(15, 23, 42, 0.03);
-      }
-
-      .feature-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        margin-top: 1.5rem;
-      }
-
-      .feature-box {
-        padding: 1.3rem;
-      }
-
-      .feature-box strong {
-        display: inline-block;
-        margin-top: 0.3rem;
-        font-size: 1.1rem;
-      }
+      .service-card li + li { margin-top: 0.4rem; }
 
       .project-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -504,24 +399,24 @@
       }
 
       .project-image {
-        min-height: 200px;
+        min-height: 220px;
         background-size: cover;
         background-position: center;
       }
 
       .project-card .content {
-        padding: 1.3rem;
+        padding: 1.2rem;
       }
 
       .project-meta {
+        margin-top: 1rem;
         display: flex;
         justify-content: space-between;
-        gap: 1rem;
-        margin-top: 1rem;
+        gap: 0.8rem;
         color: var(--muted);
-        font-size: 0.82rem;
+        font-size: 0.68rem;
+        letter-spacing: 0.12em;
         text-transform: uppercase;
-        letter-spacing: 0.08em;
       }
 
       .process-grid {
@@ -529,74 +424,62 @@
       }
 
       .process-step {
-        width: 42px;
-        height: 42px;
+        width: 38px;
+        height: 38px;
         display: grid;
         place-items: center;
         border-radius: 50%;
         background: var(--accent-soft);
-        color: var(--accent-strong);
-        font-weight: 800;
+        border: 1px solid rgba(125, 255, 106, 0.2);
+        color: var(--accent);
+        font-weight: 700;
         margin-bottom: 1rem;
       }
 
       .cta-band {
-        background: linear-gradient(135deg, var(--navy) 0%, #1f2937 45%, var(--accent-strong) 100%);
-        color: var(--white);
+        background: linear-gradient(135deg, #0b0b0b, #121212 52%, #161616);
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
       }
 
       .cta-inner {
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
         gap: 1.5rem;
-        padding: 3.4rem 0;
+        padding: 3rem 0;
       }
 
       .cta-inner h2 {
-        color: var(--white);
         font-size: clamp(2rem, 3vw, 3rem);
-        letter-spacing: -0.05em;
-      }
-
-      .cta-inner p {
-        color: rgba(255,255,255,0.75);
-        max-width: 680px;
+        max-width: 620px;
       }
 
       .site-footer {
-        background: #0b1120;
-        color: rgba(255,255,255,0.7);
+        background: #090909;
+        border-top: 1px solid var(--line);
       }
 
       .footer-inner {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 1.5rem;
+        gap: 1rem;
         padding: 2rem 0;
-      }
-
-      .footer-brand {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.8rem;
-        color: var(--white);
       }
 
       .footer-links {
         display: flex;
         flex-wrap: wrap;
         gap: 1rem;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
+        letter-spacing: 0.12em;
         text-transform: uppercase;
-        letter-spacing: 0.08em;
+        color: var(--muted);
       }
 
       @media (max-width: 980px) {
         .hero-grid,
-        .about-wrap,
         .services-grid,
         .project-grid,
         .process-grid {
@@ -606,27 +489,23 @@
         .trust-grid {
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
-      }
 
-      @media (max-width: 760px) {
-        .topbar-inner,
+        .cta-inner,
         .header-inner,
         .footer-inner,
-        .cta-inner {
+        .topbar-inner {
           flex-direction: column;
           align-items: flex-start;
         }
+      }
 
+      @media (max-width: 760px) {
         .main-nav {
           display: none;
         }
 
-        .hero {
-          padding-top: 3rem;
-        }
-
-        .feature-grid {
-          grid-template-columns: 1fr;
+        .visual-panel {
+          min-height: 420px;
         }
       }
     </style>
@@ -635,11 +514,12 @@
     <div class="topbar">
       <div class="container topbar-inner">
         <div class="topbar-meta">
-          <span>Residential &amp; Commercial</span>
-          <a href="tel:+61000000000">Call for a quote</a>
+          <span>Ontario</span>
+          <span>Residential</span>
+          <span>Commercial</span>
         </div>
         <div class="topbar-meta">
-          <span>Fast response • Safe work • Quality finishes</span>
+          <a href="mailto:info@protoselectrical.ca">info@protoselectrical.ca</a>
         </div>
       </div>
     </div>
@@ -652,9 +532,7 @@
 
         <nav class="main-nav" aria-label="Main navigation">
           <a href="#services">Services</a>
-          <a href="#about">About</a>
           <a href="#projects">Projects</a>
-          <a href="#process">Process</a>
           <a href="#contact">Contact</a>
         </nav>
 
@@ -666,48 +544,39 @@
       <section class="hero">
         <div class="container hero-grid">
           <div>
-            <span class="eyebrow">Professional electrical solutions</span>
-            <h1>Powering safer, smarter spaces.</h1>
+            <span class="eyebrow">Protos Electrical</span>
+            <h1>Electrical work that gets the job done.</h1>
             <p class="hero-copy">
-              Protos Electrical delivers dependable electrical work for homes,
-              businesses, and property managers — from upgrades and repairs to full-fit
-              commercial installations.
+              Reliable electrical service for homes, facilities, and commercial jobs.
             </p>
 
             <div class="hero-actions">
               <a class="button button-primary" href="#contact">Request a quote</a>
-              <a class="button button-secondary" href="#services">Explore services</a>
+              <a class="button button-secondary" href="#services">View services</a>
             </div>
 
-            <div class="hero-stats" aria-label="Key business statistics">
+            <div class="stats" aria-label="Key business values">
               <div class="stat">
                 <strong>10+</strong>
-                <span>Years experience</span>
+                <span>Years</span>
               </div>
               <div class="stat">
                 <strong>24/7</strong>
-                <span>Responsive support</span>
+                <span>Service</span>
               </div>
               <div class="stat">
-                <strong>100%</strong>
-                <span>Safety-focused</span>
+                <strong>Safe</strong>
+                <span>Work</span>
               </div>
             </div>
           </div>
 
-          <div class="hero-visual">
-            <div class="visual-card">
-              <div class="visual-panel" aria-label="Electrical project image">
-                <span class="panel-badge">On time. On budget.</span>
-                <div class="panel-box">
-                  <span class="mini-label">Project quality</span>
-                  <div class="mini-title">Built to last.</div>
-                  <div class="mini-detail">
-                    <span>Safety compliance</span>
-                    <strong>94%</strong>
-                  </div>
-                  <div class="quality-bar"><span></span></div>
-                </div>
+          <div class="visual-card">
+            <div class="visual-panel" aria-label="Electrical site work image">
+              <span class="visual-tag">Commercial | Residential</span>
+              <div class="visual-box">
+                <span>Installed with care</span>
+                <strong>Clean. Safe. Built to last.</strong>
               </div>
             </div>
           </div>
@@ -718,19 +587,19 @@
         <div class="container trust-grid">
           <div class="trust-item">
             <strong>Residential</strong>
-            <span>Home upgrades</span>
+            <span>Upgrades</span>
           </div>
           <div class="trust-item">
             <strong>Commercial</strong>
-            <span>Fit-outs &amp; upgrades</span>
+            <span>Fit-outs</span>
           </div>
           <div class="trust-item">
-            <strong>Maintenance</strong>
-            <span>Preventive servicing</span>
+            <strong>Service</strong>
+            <span>Maintenance</span>
           </div>
           <div class="trust-item">
             <strong>Emergency</strong>
-            <span>Fast response</span>
+            <span>Callouts</span>
           </div>
         </div>
       </div>
@@ -739,129 +608,42 @@
         <div class="container">
           <div class="section-header">
             <span class="eyebrow">What we do</span>
-            <h2>Electrical services built around safety, reliability, and clean workmanship.</h2>
+            <h2>Electrical work for everyday jobs and bigger builds.</h2>
           </div>
 
           <div class="services-grid">
             <article class="service-card">
               <div class="icon-wrap">⚡</div>
-              <h3>Residential electrical</h3>
-              <p>Electrical repairs, rewiring, lighting upgrades, power points, and new installations for modern homes.</p>
+              <h3>Residential</h3>
+              <p>Lighting, power, troubleshooting, and upgrades for homes and rental properties.</p>
               <ul>
-                <li>Lighting design</li>
-                <li>Power point installation</li>
-                <li>Home safety upgrades</li>
+                <li>New installs</li>
+                <li>Repairs</li>
+                <li>Upgrades</li>
               </ul>
             </article>
 
             <article class="service-card">
               <div class="icon-wrap">🏢</div>
-              <h3>Commercial electrical</h3>
-              <p>Reliable solutions for offices, retail spaces, new fit-outs, tenant works, and ongoing site maintenance.</p>
+              <h3>Commercial</h3>
+              <p>Reliable electrical fit-outs, tenant work, and system updates for commercial spaces.</p>
               <ul>
                 <li>Fit-outs</li>
-                <li>Switchboard upgrades</li>
-                <li>Tenant compliance works</li>
+                <li>Panels</li>
+                <li>Service work</li>
               </ul>
             </article>
 
             <article class="service-card">
               <div class="icon-wrap">🔧</div>
-              <h3>Maintenance &amp; servicing</h3>
-              <p>Preventive inspections and maintenance that reduce downtime, improve performance, and keep systems compliant.</p>
+              <h3>Maintenance</h3>
+              <p>Preventive checks, fault finding, and ongoing support to keep systems running right.</p>
               <ul>
-                <li>Routine checks</li>
-                <li>Fault finding</li>
-                <li>Scheduled maintenance</li>
+                <li>Inspections</li>
+                <li>Diagnostics</li>
+                <li>Callouts</li>
               </ul>
             </article>
-
-            <article class="service-card">
-              <div class="icon-wrap">💡</div>
-              <h3>Lighting &amp; controls</h3>
-              <p>Efficient lighting layouts and smart control systems designed to improve usability and reduce running costs.</p>
-              <ul>
-                <li>LED upgrades</li>
-                <li>Sensor lighting</li>
-                <li>Control systems</li>
-              </ul>
-            </article>
-
-            <article class="service-card">
-              <div class="icon-wrap">🧰</div>
-              <h3>Switchboards &amp; power</h3>
-              <p>Modern switchboard upgrades, fault protection, and power distribution work for safer, more capable systems.</p>
-              <ul>
-                <li>Panel upgrades</li>
-                <li>Load balancing</li>
-                <li>Energy efficiency improvements</li>
-              </ul>
-            </article>
-
-            <article class="service-card">
-              <div class="icon-wrap">🛠️</div>
-              <h3>Emergency callouts</h3>
-              <p>Fast response support for unexpected outages, tripping circuits, and urgent electrical issues across your property.</p>
-              <ul>
-                <li>Same-day response</li>
-                <li>Tracing faults</li>
-                <li>Priority service</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="about" class="section" style="background: #f1f5f9;">
-        <div class="container about-wrap">
-          <div class="about-box">
-            <span class="eyebrow">Why choose us</span>
-            <h2>Dependable electrical work with a focus on long-term value.</h2>
-            <p>
-              We believe quality electrical work should be clear, efficient, and stress-free.
-              That means honest advice, professional installation, and work carried out to a standard that keeps your property safe and operating smoothly.
-            </p>
-            <p>
-              Whether you are upgrading a home, fitting out a commercial space, or managing ongoing maintenance, we approach every job with care, accountability, and attention to detail.
-            </p>
-
-            <div class="feature-grid">
-              <div class="feature-box">
-                <div class="icon-wrap">✅</div>
-                <strong>Safety first</strong>
-                <p>Strict attention to compliance, testing, and system reliability.</p>
-              </div>
-
-              <div class="feature-box">
-                <div class="icon-wrap">📈</div>
-                <strong>Clear communication</strong>
-                <p>Transparent quotes, practical recommendations, and no hidden surprises.</p>
-              </div>
-
-              <div class="feature-box">
-                <div class="icon-wrap">🧠</div>
-                <strong>Practical solutions</strong>
-                <p>Work designed around how your property actually operates and grows.</p>
-              </div>
-
-              <div class="feature-box">
-                <div class="icon-wrap">⏱️</div>
-                <strong>Reliable scheduling</strong>
-                <p>On-time service that respects your property, your time, and your budget.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="contact-box" id="contact">
-            <span class="eyebrow">Get in touch</span>
-            <h2>Tell us what you need.</h2>
-            <p>We can help with repairs, upgrades, new installations, and commercial electrical projects.</p>
-
-            <p><strong>Phone:</strong> <a href="tel:+14165550199">+1 (416) 555-0199</a></p>
-            <p><strong>Email:</strong> <a href="mailto:info@protoselectrical.ca">info@protoselectrical.ca</a></p>
-            <p><strong>Service area:</strong> Residential and commercial projects across Ontario</p>
-
-            <a class="button button-primary" href="mailto:info@protoselectrical.ca?subject=Quote%20Request">Request a quote</a>
           </div>
         </div>
       </section>
@@ -870,15 +652,15 @@
         <div class="container">
           <div class="section-header">
             <span class="eyebrow">Recent work</span>
-            <h2>Projects designed for performance, safety, and long-term value.</h2>
+            <h2>Work that speaks for itself.</h2>
           </div>
 
           <div class="project-grid">
             <article class="project-card">
               <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80');"></div>
               <div class="content">
-                <h3>Residential renovation</h3>
-                <p>Lighting upgrades, circuit improvements, and safety-focused rewiring for a modern family home.</p>
+                <h3>Kitchen renovation</h3>
+                <p>Lighting, rewiring, and power updates completed for a clean residential finish.</p>
                 <div class="project-meta">
                   <span>Home</span>
                   <span>Upgrade</span>
@@ -890,9 +672,9 @@
               <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80');"></div>
               <div class="content">
                 <h3>Office fit-out</h3>
-                <p>Full commercial fit-out with efficient power distribution, lighting, and controlled workspaces.</p>
+                <p>Commercial electrical layout and installation for a modern workspace.</p>
                 <div class="project-meta">
-                  <span>Commercial</span>
+                  <span>Office</span>
                   <span>Fit-out</span>
                 </div>
               </div>
@@ -901,8 +683,8 @@
             <article class="project-card">
               <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=900&q=80');"></div>
               <div class="content">
-                <h3>Switchboard upgrade</h3>
-                <p>Improved system protection and reliable power performance for a growing commercial property.</p>
+                <h3>Panel upgrade</h3>
+                <p>Electrical panel improvement for safer, more reliable building performance.</p>
                 <div class="project-meta">
                   <span>Power</span>
                   <span>Upgrade</span>
@@ -913,58 +695,24 @@
         </div>
       </section>
 
-      <section id="process" class="section" style="background: #f8fafc;">
-        <div class="container">
-          <div class="section-header">
-            <span class="eyebrow">How it works</span>
-            <h2>A clear, stress-free process from consult to completion.</h2>
-          </div>
-
-          <div class="process-grid">
-            <article class="process-card">
-              <div class="process-step">01</div>
-              <h3>Consultation</h3>
-              <p>We listen to your goals, assess the site, and identify the safest and most practical path forward.</p>
-            </article>
-
-            <article class="process-card">
-              <div class="process-step">02</div>
-              <h3>Quote &amp; planning</h3>
-              <p>You receive a clear recommendation, transparent pricing, and a realistic delivery timeline.</p>
-            </article>
-
-            <article class="process-card">
-              <div class="process-step">03</div>
-              <h3>Delivery</h3>
-              <p>We complete the work with clean workmanship, testing, and final inspection for peace of mind.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="cta-band">
+      <section id="contact" class="cta-band">
         <div class="container cta-inner">
           <div>
-            <span class="eyebrow" style="color: #a7f3d0;">Ready to get started?</span>
-            <h2>Need a trusted electrician for your next job?</h2>
-            <p>From emergency repairs to commercial upgrades, we’re ready to help with practical solutions and reliable service.</p>
+            <span class="eyebrow" style="color: var(--accent);">Need a contractor?</span>
+            <h2>Tell us what the job needs.</h2>
           </div>
-          <a class="button button-primary" href="mailto:info@protoselectrical.ca?subject=Quote%20Request">Book a quote</a>
+          <a class="button button-primary" href="mailto:info@protoselectrical.ca?subject=Quote%20Request">Request a quote</a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <div class="footer-brand">
-          <img class="brand-mark" src="assets/protos-logo.png" alt="Protos Electrical logo" style="width: min(200px, 44vw);" />
-        </div>
-
+        <img class="brand-mark" src="assets/protos-logo.png" alt="Protos Electrical logo" style="width: min(220px, 52vw);" />
         <div class="footer-links">
           <a href="#services">Services</a>
-          <a href="#about">About</a>
           <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
+          <a href="mailto:info@protoselectrical.ca">Email</a>
         </div>
       </div>
     </footer>
