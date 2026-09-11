@@ -13,6 +13,7 @@
       content="electrician, electrical contractor, commercial electrical, residential electrical, maintenance, switchboards, Protos Electrical"
     />
     <meta name="theme-color" content="#0f172a" />
+    <link rel="icon" type="image/png" href="assets/protos-logo.png" />
     <meta property="og:title" content="Protos Electrical" />
     <meta
       property="og:description"
@@ -125,34 +126,22 @@
       }
 
       .brand-mark {
-        width: 46px;
-        height: 46px;
-        border-radius: 14px;
-        display: grid;
-        place-items: center;
-        background: linear-gradient(135deg, var(--accent), var(--accent-strong));
-        color: var(--white);
-        font-weight: 700;
-        font-size: 1.1rem;
+        width: min(260px, 52vw);
+        height: auto;
+        display: block;
+        object-fit: contain;
       }
 
       .brand-text {
-        display: flex;
-        flex-direction: column;
-        line-height: 1.1;
+        display: none;
       }
 
       .brand-name {
-        font-weight: 800;
-        letter-spacing: 0.02em;
-        font-size: 1.1rem;
+        display: none;
       }
 
       .brand-tag {
-        font-size: 0.7rem;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: var(--muted);
+        display: none;
       }
 
       .main-nav {
@@ -658,11 +647,7 @@
     <header class="site-header">
       <div class="container header-inner">
         <a href="#top" class="brand" aria-label="Protos Electrical home">
-          <span class="brand-mark">PE</span>
-          <span class="brand-text">
-            <span class="brand-name">Protos Electrical</span>
-            <span class="brand-tag">Trusted electrical services</span>
-          </span>
+          <img class="brand-mark" src="assets/protos-logo.png" alt="Protos Electrical logo" />
         </a>
 
         <nav class="main-nav" aria-label="Main navigation">
@@ -972,8 +957,7 @@
     <footer class="site-footer">
       <div class="container footer-inner">
         <div class="footer-brand">
-          <span class="brand-mark" style="width: 38px; height: 38px; border-radius: 12px; font-size: 0.96rem;">PE</span>
-          <span>Protos Electrical</span>
+          <img class="brand-mark" src="assets/protos-logo.png" alt="Protos Electrical logo" style="width: min(200px, 44vw);" />
         </div>
 
         <div class="footer-links">
