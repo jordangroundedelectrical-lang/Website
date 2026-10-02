@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Protos Electrical | Licensed Electrical Contractor — Calgary &amp; Okotoks</title>
-    <meta name="description" content="Protos Electrical is a family-owned electrical contractor delivering licensed residential, commercial, and maintenance services across Calgary and Okotoks, Alberta. Quality work, on time, every time." />
-    <meta name="keywords" content="electrician Calgary, electrician Okotoks, electrical contractor Alberta, residential electrical, commercial electrical, maintenance electrician, licensed electrician, Protos Electrical" />
+    <title>Protos Electrical | Calgary Electrician — EV Chargers, Hot Tubs, Service Upgrades</title>
+    <meta name="description" content="Family-owned electrical contractor serving Calgary and area. EV charger installs, hot tub wiring, new electrical services, commercial tenant improvements, and residential &amp; commercial service. Call 780-803-2868." />
+    <meta name="keywords" content="electrician Calgary, EV charger installation Calgary, hot tub wiring Calgary, electrical service upgrade Calgary, commercial tenant improvements Calgary, commercial electrician Calgary, residential electrician Calgary, Protos Electrical" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#050505" />
     <link rel="canonical" href="https://protoselectrical.ca/" />
@@ -16,14 +16,14 @@
     <meta property="og:url" content="https://protoselectrical.ca/" />
     <meta property="og:site_name" content="Protos Electrical" />
     <meta property="og:locale" content="en_CA" />
-    <meta property="og:title" content="Protos Electrical | Licensed Electrical Contractor — Calgary &amp; Okotoks" />
-    <meta property="og:description" content="Residential, commercial, and maintenance electrical services across Calgary and Okotoks, Alberta. Request a quote today." />
+    <meta property="og:title" content="Protos Electrical | Calgary Electrician" />
+    <meta property="og:description" content="EV chargers, hot tubs, new services, tenant improvements, and residential &amp; commercial service across Calgary and area. Call 780-803-2868." />
     <meta property="og:image" content="https://protoselectrical.ca/assets/protos-logo.png" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Protos Electrical | Licensed Electrical Contractor" />
-    <meta name="twitter:description" content="Residential, commercial, and maintenance electrical services across Calgary and Okotoks, Alberta." />
+    <meta name="twitter:description" content="EV chargers, hot tubs, new services, tenant improvements, and residential &amp; commercial service across Calgary and area." />
     <meta name="twitter:image" content="https://protoselectrical.ca/assets/protos-logo.png" />
 
     <!-- Google Fonts: Inter -->
@@ -37,8 +37,11 @@
       "@context": "https://schema.org",
       "@type": "ElectricalContractor",
       "name": "Protos Electrical",
-      "description": "Licensed electrical contractor providing residential, commercial, and maintenance electrical services across Calgary and Okotoks, Alberta.",
+      "description": "Family-owned electrical contractor serving Calgary and area: EV charger installation, hot tub wiring, new electrical services, commercial tenant improvements, and residential and commercial service.",
       "url": "https://protoselectrical.ca",
+      "logo": "https://protoselectrical.ca/assets/protos-logo.png",
+      "image": "https://protoselectrical.ca/assets/projects/meter-stack-condo.jpg",
+      "telephone": "+1-780-803-2868",
       "email": "info@protoselectrical.ca",
       "address": {
         "@type": "PostalAddress",
@@ -48,8 +51,32 @@
       },
       "areaServed": [
         { "@type": "City", "name": "Calgary" },
-        { "@type": "City", "name": "Okotoks" }
+        { "@type": "AdministrativeArea", "name": "Calgary Region" }
       ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "07:00",
+          "closes": "16:00"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Electrical services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "EV charger installation" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "New electrical services and service upgrades" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial tenant improvements" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hot tub wiring" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Residential electrical service" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial electrical service" } }
+        ]
+      },
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Electrical Contractors Association of Alberta"
+      },
       "priceRange": "$$"
     }
     </script>
@@ -355,7 +382,7 @@
         overflow: hidden;
         background-image:
           linear-gradient(160deg, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.62) 100%),
-          url('assets/hero-bg.jpg');
+          url('assets/projects/meter-stack-condo.jpg');
         background-size: cover;
         background-position: center;
         background-color: #0a150a;
@@ -519,38 +546,42 @@
       .process-card h3 { margin-bottom: 0.75rem; }
 
       /* ── Projects ────────────────────────────────────────── */
-      .project-grid {
+      .gallery-grid {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0,1fr));
-        gap: 1.2rem;
+        grid-template-columns: repeat(4, minmax(0,1fr));
+        gap: 1rem;
       }
-      .project-card {
+      .gallery-item {
         border: 1px solid var(--line);
-        border-radius: var(--radius);
+        border-radius: var(--radius-sm);
         overflow: hidden;
         background: var(--panel);
-        transition: transform var(--transition), box-shadow var(--transition);
+        transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
       }
-      .project-card:hover {
-        transform: translateY(-5px);
+      .gallery-item:hover {
+        transform: translateY(-4px);
+        border-color: rgba(125,255,106,0.22);
         box-shadow: 0 24px 64px rgba(0,0,0,0.55);
       }
-      .project-image {
-        min-height: 240px;
-        background-size: cover;
-        background-position: center;
-        position: relative;
+      .gallery-item img {
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
       }
-      .project-image::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(to top, rgba(0,0,0,0.45), transparent 55%);
+      .gallery-item figcaption {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.6rem;
+        padding: 0.85rem 1rem;
       }
-      .project-card .content { padding: 1.5rem; }
-      .project-card h3 { margin-bottom: 0.5rem; font-size: 1.2rem; }
-      .project-card p  { font-size: 0.9rem; margin-bottom: 1rem; }
-      .project-meta { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+      .gallery-item figcaption strong {
+        font-size: 0.88rem;
+        font-weight: 700;
+        color: var(--text);
+        line-height: 1.3;
+      }
+      .gallery-item .tag { flex-shrink: 0; }
       .tag {
         display: inline-block;
         padding: 0.22rem 0.72rem;
@@ -657,6 +688,8 @@
       }
       .footer-brand .brand-mark { width: min(190px, 44vw); margin-bottom: 1.1rem; }
       .footer-brand p { font-size: 0.88rem; max-width: 300px; color: var(--muted-2); }
+      .footer-brand p + p { margin-top: 0.8rem; }
+      .footer-brand a { color: var(--text); font-weight: 600; }
       .footer-links-group { display: flex; gap: 4.5rem; }
       .footer-col h4 {
         font-size: 0.65rem;
@@ -686,6 +719,30 @@
       }
       .footer-bottom-links a:hover { color: var(--muted); }
 
+      .hours-line {
+        margin-top: 1.2rem;
+        font-size: 0.9rem;
+        color: var(--muted);
+      }
+      .hours-line strong { color: var(--text); font-weight: 600; }
+
+      /* ── Mobile call bar ─────────────────────────────────── */
+      .call-bar {
+        display: none;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 95;
+        gap: 0.6rem;
+        padding: 0.7rem 1rem calc(0.7rem + env(safe-area-inset-bottom));
+        background: rgba(5,5,5,0.94);
+        border-top: 1px solid var(--line);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+      }
+      .call-bar .button { flex: 1; min-height: 48px; padding: 0 1rem; }
+
       /* ── Scroll Reveal ───────────────────────────────────── */
       .reveal {
         opacity: 0;
@@ -700,6 +757,7 @@
 
       /* ── Responsive ─────────────────────────────────────── */
       @media (max-width: 1060px) {
+        .gallery-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
         .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
         .footer-top   { grid-template-columns: 1fr; }
       }
@@ -707,7 +765,6 @@
       @media (max-width: 900px) {
         .hero-grid,
         .services-grid,
-        .project-grid,
         .process-grid,
         .testimonials-grid { grid-template-columns: 1fr; }
         .trust-grid         { grid-template-columns: repeat(2, minmax(0,1fr)); }
@@ -718,10 +775,14 @@
       @media (max-width: 760px) {
         .main-nav, .nav-cta { display: none; }
         .nav-toggle { display: flex; }
+        .gallery-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 0.7rem; }
+        .gallery-item figcaption { flex-direction: column; align-items: flex-start; padding: 0.7rem 0.8rem; }
         .section    { padding: 4rem 0; }
         .hero       { padding: 3rem 0 3.5rem; }
         .form-row   { grid-template-columns: 1fr; }
         .footer-top { padding: 2.8rem 0 2.2rem; }
+        .call-bar   { display: flex; }
+        body        { padding-bottom: 76px; }
       }
 
       @media (max-width: 480px) {
@@ -737,12 +798,11 @@
     <div class="topbar">
       <div class="container topbar-inner">
         <div class="topbar-meta">
-          <span>Calgary &amp; Okotoks, AB</span>
-          <span>Residential</span>
-          <span>Commercial</span>
-          <span>Maintenance</span>
+          <span>Calgary &amp; area</span>
+          <span>Mon–Fri 7am–4pm</span>
         </div>
         <div class="topbar-meta">
+          <a href="tel:+17808032868">780-803-2868</a>
           <a href="mailto:info@protoselectrical.ca">info@protoselectrical.ca</a>
         </div>
       </div>
@@ -763,7 +823,7 @@
           <a href="#contact">Contact</a>
         </nav>
 
-        <a class="nav-cta" href="#contact">Get a quote</a>
+        <a class="nav-cta" href="tel:+17808032868">Call 780-803-2868</a>
 
         <button
           class="nav-toggle"
@@ -786,7 +846,7 @@
       <a href="#process">Process</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
-      <a class="button button-primary mobile-cta" href="#contact">Get a quote</a>
+      <a class="button button-primary mobile-cta" href="tel:+17808032868">Call 780-803-2868</a>
     </div>
 
     <main id="top">
@@ -798,17 +858,17 @@
             <span class="eyebrow reveal">Licensed Electrical Contractor</span>
             <h1 class="reveal reveal-d1">Electrical work that gets the job done.</h1>
             <p class="reveal reveal-d2">
-              Reliable service for homes, facilities, and commercial jobs across Calgary and Okotoks.
-              We show up, do quality work, and leave the site clean.
+              EV chargers, hot tubs, new services, and tenant improvements for homes and businesses
+              across Calgary and area. We show up, do quality work, and leave the site clean.
             </p>
             <div class="hero-actions reveal reveal-d3">
-              <a class="button button-primary" href="#contact">Request a free quote</a>
-              <a class="button button-secondary" href="#services">Our services</a>
+              <a class="button button-primary" href="tel:+17808032868">Call 780-803-2868</a>
+              <a class="button button-secondary" href="mailto:info@protoselectrical.ca?subject=Site%20Visit%20Request">Email us</a>
             </div>
             <div class="stats reveal reveal-d4" aria-label="Business highlights">
               <div class="stat">
-                <strong>20+</strong>
-                <span>Years experience</span>
+                <strong>2011</strong>
+                <span>In the trade since</span>
               </div>
               <div class="stat">
                 <strong>Family</strong>
@@ -825,7 +885,7 @@
             <div
               class="visual-panel"
               role="img"
-              aria-label="Electrician working on a commercial panel installation"
+              aria-label="Multi-unit meter stack installed by Protos Electrical"
             >
               <span class="visual-tag">Commercial · Residential</span>
               <div class="visual-box">
@@ -841,12 +901,12 @@
       <div class="trust-strip">
         <div class="container trust-grid">
           <div class="trust-item">
-            <strong>Free Quotes</strong>
-            <span>No obligation</span>
+            <strong>On-Site Pricing</strong>
+            <span>Firm &amp; upfront</span>
           </div>
           <div class="trust-item">
             <strong>Licensed &amp; Insured</strong>
-            <span>Alberta certified</span>
+            <span>WCB &amp; liability coverage</span>
           </div>
           <div class="trust-item">
             <strong>Guaranteed Work</strong>
@@ -892,41 +952,74 @@
         <div class="container">
           <div class="section-header">
             <span class="eyebrow reveal">What we do</span>
-            <h2 class="reveal reveal-d1">Electrical work for everyday jobs and bigger builds.</h2>
-            <p class="reveal reveal-d2">From a single outlet to a full commercial fit-out, we bring the same level of care and quality to every project.</p>
+            <h2 class="reveal reveal-d1">Electrical services in Calgary and area.</h2>
+            <p class="reveal reveal-d2">From a hot tub hookup to a full commercial tenant improvement, we bring the same level of care and quality to every project.</p>
           </div>
           <div class="services-grid">
             <article class="service-card reveal">
-              <div class="icon-wrap">⚡</div>
-              <h3>Residential</h3>
-              <p>Lighting, power, troubleshooting, and upgrades for homes and rental properties.</p>
+              <div class="icon-wrap">🔌</div>
+              <h3>EV Chargers</h3>
+              <p>Level 2 charger installs for homes, garages, and commercial parking — sized to your panel and permitted properly.</p>
               <ul>
-                <li>Panel upgrades &amp; replacements</li>
-                <li>Lighting &amp; dimmer installs</li>
-                <li>Outlet &amp; switch work</li>
-                <li>Fault finding &amp; repairs</li>
+                <li>Home &amp; garage chargers</li>
+                <li>Commercial &amp; multi-unit charging</li>
+                <li>Panel capacity assessment</li>
+                <li>Permits &amp; inspection</li>
               </ul>
             </article>
             <article class="service-card reveal reveal-d1">
-              <div class="icon-wrap">🏢</div>
-              <h3>Commercial</h3>
-              <p>Reliable electrical fit-outs, tenant work, and system updates for commercial spaces.</p>
+              <div class="icon-wrap">⚡</div>
+              <h3>New Services</h3>
+              <p>New electrical services and service upgrades for residential and commercial buildings.</p>
               <ul>
-                <li>New builds &amp; fit-outs</li>
-                <li>Service &amp; panel work</li>
-                <li>Tenant improvements</li>
-                <li>Code compliance upgrades</li>
+                <li>Residential service upgrades</li>
+                <li>Commercial services</li>
+                <li>Panel replacements</li>
+                <li>Utility coordination</li>
+              </ul>
+            </article>
+            <article class="service-card reveal reveal-d2">
+              <div class="icon-wrap">🏢</div>
+              <h3>Commercial Tenant Improvements</h3>
+              <p>Electrical for office, retail, and industrial build-outs — on schedule and to code.</p>
+              <ul>
+                <li>Office &amp; retail fit-outs</li>
+                <li>Lighting &amp; power layouts</li>
+                <li>Demising &amp; renovations</li>
+                <li>Working with GCs &amp; property managers</li>
+              </ul>
+            </article>
+            <article class="service-card reveal">
+              <div class="icon-wrap">♨️</div>
+              <h3>Hot Tubs</h3>
+              <p>Dedicated circuits and disconnects for hot tubs and swim spas, installed safely and inspected.</p>
+              <ul>
+                <li>Dedicated circuit &amp; GFCI disconnect</li>
+                <li>Underground or surface wiring</li>
+                <li>Panel capacity check</li>
+                <li>Permits &amp; inspection</li>
+              </ul>
+            </article>
+            <article class="service-card reveal reveal-d1">
+              <div class="icon-wrap">🏠</div>
+              <h3>Residential Service</h3>
+              <p>Repairs, upgrades, and troubleshooting for homes and rental properties.</p>
+              <ul>
+                <li>Lighting &amp; pot lights</li>
+                <li>Outlets, switches &amp; circuits</li>
+                <li>Renovations &amp; basements</li>
+                <li>Fault finding &amp; repairs</li>
               </ul>
             </article>
             <article class="service-card reveal reveal-d2">
               <div class="icon-wrap">🔧</div>
-              <h3>Maintenance</h3>
-              <p>Preventive checks, fault finding, and ongoing support to keep your systems running right.</p>
+              <h3>Commercial Service</h3>
+              <p>Service calls and ongoing support to keep your business running.</p>
               <ul>
-                <li>Scheduled inspections</li>
-                <li>Fault diagnostics</li>
-                <li>Priority repairs</li>
-                <li>Safety assessments</li>
+                <li>Troubleshooting &amp; repairs</li>
+                <li>Lighting upgrades</li>
+                <li>Equipment connections</li>
+                <li>Code compliance work</li>
               </ul>
             </article>
           </div>
@@ -945,12 +1038,12 @@
             <div class="process-card reveal">
               <div class="process-step">1</div>
               <h3>Contact us</h3>
-              <p>Send us a message or request a quote. Tell us what you need — we'll respond quickly and work around your schedule.</p>
+              <p>Call or email to book a site visit. Tell us what you need — we'll respond quickly and work around your schedule.</p>
             </div>
             <div class="process-card reveal reveal-d1">
               <div class="process-step">2</div>
               <h3>Site assessment</h3>
-              <p>We visit the site, assess the work, and give you a clear, honest quote with no hidden costs or surprises.</p>
+              <p>We visit the site, assess the work, and give you a firm, upfront price in person — no hidden costs or surprises.</p>
             </div>
             <div class="process-card reveal reveal-d2">
               <div class="process-step">3</div>
@@ -967,101 +1060,56 @@
           <div class="section-header">
             <span class="eyebrow reveal">Recent work</span>
             <h2 class="reveal reveal-d1">Work that speaks for itself.</h2>
-            <p class="reveal reveal-d2">A sample of jobs completed across Calgary and Okotoks — residential, commercial, and everything in between.</p>
+            <p class="reveal reveal-d2">Real jobs from our crew across Calgary and area — from 1600 amp commercial services to EV chargers and hot tubs.</p>
           </div>
-          <div class="project-grid">
-            <article class="project-card reveal">
-              <div
-                class="project-image"
-                style="background-image: url('assets/project-kitchen.jpg');"
-                role="img"
-                aria-label="Kitchen electrical renovation"
-              ></div>
-              <div class="content">
-                <h3>Kitchen renovation</h3>
-                <p>Lighting, rewiring, and power updates completed for a clean residential finish.</p>
-                <div class="project-meta">
-                  <span class="tag">Residential</span>
-                  <span class="tag">Upgrade</span>
-                </div>
-              </div>
-            </article>
-            <article class="project-card reveal reveal-d1">
-              <div
-                class="project-image"
-                style="background-image: url('assets/project-office.jpg');"
-                role="img"
-                aria-label="Commercial office electrical fit-out"
-              ></div>
-              <div class="content">
-                <h3>Office fit-out</h3>
-                <p>Commercial electrical layout and installation for a modern workspace build-out.</p>
-                <div class="project-meta">
-                  <span class="tag">Commercial</span>
-                  <span class="tag">Fit-out</span>
-                </div>
-              </div>
-            </article>
-            <article class="project-card reveal reveal-d2">
-              <div
-                class="project-image"
-                style="background-image: url('assets/project-panel.jpg');"
-                role="img"
-                aria-label="Electrical panel upgrade"
-              ></div>
-              <div class="content">
-                <h3>Panel upgrade</h3>
-                <p>Full electrical panel replacement for safer, more reliable building performance.</p>
-                <div class="project-meta">
-                  <span class="tag">Power</span>
-                  <span class="tag">Upgrade</span>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- Testimonials -->
-      <section id="testimonials" class="section testimonials-section">
-        <div class="container">
-          <div class="section-header">
-            <span class="eyebrow reveal">Client feedback</span>
-            <h2 class="reveal reveal-d1">What our clients say.</h2>
-          </div>
-          <div class="testimonials-grid">
-            <figure class="testimonial-card reveal">
-              <div class="stars">★★★★★</div>
-              <blockquote>"Fast, professional, and tidy. They upgraded our whole panel and had everything sorted in a day. No mess, no fuss — exactly what we needed."</blockquote>
-              <figcaption class="testimonial-cite">
-                <div class="cite-avatar">MJ</div>
-                <div>
-                  <span class="cite-name">M. Johnson</span>
-                  <span class="cite-role">Homeowner, Calgary</span>
-                </div>
-              </figcaption>
+          <div class="gallery-grid">
+            <figure class="gallery-item reveal ">
+              <img src="assets/projects/1600-amp-mdp.jpg" alt="1600 amp main distribution panel with feeders landed" loading="lazy" width="1000" height="1250" />
+              <figcaption><strong>1600 A main distribution</strong><span class="tag">Commercial</span></figcaption>
             </figure>
-            <figure class="testimonial-card reveal reveal-d1">
-              <div class="stars">★★★★★</div>
-              <blockquote>"We use Protos for all our commercial tenant work. Reliable, on time, and the quality is always consistent. Couldn't ask for a better contractor."</blockquote>
-              <figcaption class="testimonial-cite">
-                <div class="cite-avatar">KS</div>
-                <div>
-                  <span class="cite-name">K. Smith</span>
-                  <span class="cite-role">Property Manager, Okotoks</span>
-                </div>
-              </figcaption>
+            <figure class="gallery-item reveal reveal-d1">
+              <img src="assets/projects/meter-stack-condo.jpg" alt="Multi-unit meter stack installed in a condo electrical room" loading="lazy" width="1000" height="1250" />
+              <figcaption><strong>Condo meter stack</strong><span class="tag">Multi-family</span></figcaption>
             </figure>
-            <figure class="testimonial-card reveal reveal-d2">
-              <div class="stars">★★★★★</div>
-              <blockquote>"Called them about a breaker fault in the morning and they had us back up and running the same day. Straightforward, honest, and easy to work with."</blockquote>
-              <figcaption class="testimonial-cite">
-                <div class="cite-avatar">TB</div>
-                <div>
-                  <span class="cite-name">T. Brown</span>
-                  <span class="cite-role">Business Owner, Calgary</span>
-                </div>
-              </figcaption>
+            <figure class="gallery-item reveal reveal-d2">
+              <img src="assets/projects/new-service.jpg" alt="New electrical service being installed on a building under construction" loading="lazy" width="1000" height="1250" />
+              <figcaption><strong>New service install</strong><span class="tag">New Service</span></figcaption>
+            </figure>
+            <figure class="gallery-item reveal reveal-d3">
+              <img src="assets/projects/ev-charger-tesla.jpg" alt="Tesla wall connector wired and ready for its cover" loading="lazy" width="1000" height="1250" />
+              <figcaption><strong>Tesla wall connector</strong><span class="tag">EV Charger</span></figcaption>
+            </figure>
+            <figure class="gallery-item reveal ">
+              <img src="assets/projects/ev-charger-pipe.jpg" alt="EV charger mounted in a garage with conduit run" loading="lazy" width="1000" height="1250" />
+              <figcaption><strong>Garage EV charger</strong><span class="tag">EV Charger</span></figcaption>
+            </figure>
+            <figure class="gallery-item reveal reveal-d1">
+              <img src="assets/projects/hot-tub-install.jpg" alt="Hot tub GFCI disconnect installed on a house exterior" loading="lazy" width="1000" height="1250" />
+              <figcaption><strong>Hot tub disconnect</strong><span class="tag">Hot Tub</span></figcaption>
+            </figure>
+            <figure class="gallery-item reveal reveal-d2">
+              <img src="assets/projects/rough-in-commercial.jpg" alt="Commercial tenant space framed and roughed in" loading="lazy" width="1000" height="1250" />
+              <figcaption><strong>Commercial rough-in</strong><span class="tag">Tenant Improvement</span></figcaption>
+            </figure>
+            <figure class="gallery-item reveal reveal-d3">
+              <img src="assets/projects/feeders-commercial.jpg" alt="Feeder runs through a commercial building under construction" loading="lazy" width="1000" height="1250" />
+              <figcaption><strong>Commercial feeders</strong><span class="tag">Commercial</span></figcaption>
+            </figure>
+            <figure class="gallery-item reveal ">
+              <img src="assets/projects/emt-suite-feeders.jpg" alt="EMT conduit runs for suite feeders along a corridor ceiling" loading="lazy" width="1000" height="1250" />
+              <figcaption><strong>Suite feeders in EMT</strong><span class="tag">Multi-family</span></figcaption>
+            </figure>
+            <figure class="gallery-item reveal reveal-d1">
+              <img src="assets/projects/steam-room-lighting.jpg" alt="Linear LED lighting in a finished steam room" loading="lazy" width="1000" height="1250" />
+              <figcaption><strong>Steam room lighting</strong><span class="tag">Lighting</span></figcaption>
+            </figure>
+            <figure class="gallery-item reveal reveal-d2">
+              <img src="assets/projects/new-home-panel.jpg" alt="New residential panel installed during rough-in" loading="lazy" width="1000" height="1250" />
+              <figcaption><strong>New home panel</strong><span class="tag">Residential</span></figcaption>
+            </figure>
+            <figure class="gallery-item reveal reveal-d3">
+              <img src="assets/projects/new-home-rough-in.jpg" alt="New home upper floor framed and roughed in" loading="lazy" width="1000" height="1250" />
+              <figcaption><strong>New home rough-in</strong><span class="tag">Residential</span></figcaption>
             </figure>
           </div>
         </div>
@@ -1074,15 +1122,18 @@
             <span class="eyebrow">Get in touch</span>
             <h2>Tell us what the job needs.</h2>
             <p>Whether it's a quick repair or a full commercial build, we're ready to help.</p>
+            <p class="hours-line"><strong>Mon–Fri, 7am–4pm</strong> · Serving Calgary &amp; area</p>
             <div class="certifications">
-              <span class="cert-badge">Alberta Licensed</span>
               <span class="cert-badge">Master Electrician</span>
-              <span class="cert-badge">Insured &amp; Bonded</span>
+              <span class="cert-badge">Alberta Licensed</span>
+              <span class="cert-badge">ECAA Member</span>
+              <span class="cert-badge">WCB Covered</span>
+              <span class="cert-badge">Commercial Liability Insured</span>
             </div>
           </div>
           <div class="contact-actions">
-            <a class="button button-primary" href="mailto:info@protoselectrical.ca?subject=Quote%20Request">Request a free quote</a>
-            <a class="button button-secondary" href="mailto:info@protoselectrical.ca">info@protoselectrical.ca</a>
+            <a class="button button-primary" href="tel:+17808032868">Call 780-803-2868</a>
+            <a class="button button-secondary" href="mailto:info@protoselectrical.ca?subject=Site%20Visit%20Request">Email us</a>
           </div>
         </div>
       </div>
@@ -1100,16 +1151,18 @@
               alt="Protos Electrical"
               style="width: min(180px, 42vw);"
             />
-            <p>Licensed electrical contractor delivering residential, commercial, and maintenance services across Calgary and Okotoks.</p>
+            <p>Family-owned electrical contractor serving Calgary and area.</p>
+            <p><a href="tel:+17808032868">780-803-2868</a><br />Mon–Fri, 7am–4pm</p>
           </div>
           <div class="footer-links-group">
             <div class="footer-col">
               <h4>Services</h4>
               <ul>
-                <li><a href="#services">Residential</a></li>
-                <li><a href="#services">Commercial</a></li>
-                <li><a href="#services">Maintenance</a></li>
-                <li><a href="#contact">Free Quotes</a></li>
+                <li><a href="#services">EV Chargers</a></li>
+                <li><a href="#services">New Services</a></li>
+                <li><a href="#services">Tenant Improvements</a></li>
+                <li><a href="#services">Hot Tubs</a></li>
+                <li><a href="#services">Residential &amp; Commercial Service</a></li>
               </ul>
             </div>
             <div class="footer-col">
@@ -1117,7 +1170,6 @@
               <ul>
                 <li><a href="#process">How we work</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#testimonials">Reviews</a></li>
                 <li><a href="#contact">Contact</a></li>
               </ul>
             </div>
@@ -1131,6 +1183,12 @@
         </div>
       </div>
     </footer>
+
+    <!-- Mobile call bar -->
+    <div class="call-bar">
+      <a class="button button-primary" href="tel:+17808032868">Call now</a>
+      <a class="button button-secondary" href="mailto:info@protoselectrical.ca?subject=Site%20Visit%20Request">Email</a>
+    </div>
 
     <script>
       // Hamburger menu
