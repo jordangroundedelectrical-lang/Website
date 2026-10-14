@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Condo & Apartment EV Charging in Calgary | Protos Electrical</title>
+<meta name="description" content="EV charging for Calgary condos, apartments and townhouse complexes. Load calculations, EV energy management, service upgrades and Level 2 installs by a Master Electrician-owned contractor. Call 780-803-2868.">
+<link rel="canonical" href="https://protoselectrical.ca/condo-ev-charging">
+<meta property="og:title" content="Condo & Apartment EV Charging in Calgary | Protos Electrical">
+<meta property="og:description" content="Get your building EV-ready without guessing. Capacity first, then a plan your board can approve.">
+<meta property="og:image" content="https://protoselectrical.ca/assets/projects/meter-stack-condo.jpg">
+<meta name="theme-color" content="#050505">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="/assets/protos-logo.png">
+<style>
+:root{
+  --ink:#050505; --panel:#121412; --line:#262a26; --text:#e9ece8; --muted:#9aa39a;
+  --green:#12B800; --green-dim:#0d7f00;
+  --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"Barlow",Arial,Helvetica,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--text);font:400 17px/1.6 var(--body)}
+img{max-width:100%;display:block}
+a{color:var(--green)}
+:focus-visible{outline:3px solid var(--green);outline-offset:3px}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.05;margin:0 0 .5em;letter-spacing:.01em}
+h1{font-size:clamp(2.6rem,6vw,4.6rem)}
+h2{font-size:clamp(2rem,4vw,2.9rem)}
+h3{font-size:1.45rem;font-weight:600}
+p{margin:0 0 1em;max-width:66ch}
+
+/* header + footer: same as the homepage */
+.topbar,.site-header,.mobile-nav,.site-footer,.call-bar{
+  --h-panel:#111111; --h-line:#222222; --h-text:#f3f3f3; --h-muted:#999999; --h-muted-2:#5a5a5a;
+  --h-accent:#7dff6a; --h-accent-strong:#50d952; --h-ease:.22s ease;
+  font-family:'Inter',Arial,sans-serif;line-height:1.6;
+}
+.topbar a,.site-header a,.mobile-nav a,.site-footer a,.call-bar a{color:inherit;text-decoration:none}
+.container{width:min(1200px,calc(100% - 2rem));margin-inline:auto}
+.button{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:52px;padding:0 1.85rem;border-radius:999px;font-family:inherit;font-size:.76rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border:1px solid transparent;cursor:pointer;transition:transform var(--h-ease),box-shadow var(--h-ease),border-color var(--h-ease)}
+.mobile-nav .button-primary,.call-bar .button-primary{background:linear-gradient(135deg,var(--h-accent),var(--h-accent-strong));color:#040404}
+.call-bar .button-secondary{background:transparent;border-color:var(--h-line);color:var(--h-text)}
+.topbar{background:#0b0b0b;border-bottom:1px solid var(--h-line)}
+.topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:40px;padding-block:.4rem;font-size:.66rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--h-muted-2);flex-wrap:wrap}
+.topbar-meta{display:flex;align-items:center;gap:1.8rem;flex-wrap:wrap}
+.topbar a{transition:color var(--h-ease)}
+.topbar a:hover{color:var(--h-text)}
+.site-header{position:sticky;top:0;z-index:90;background:rgba(5,5,5,.88);border-bottom:1px solid var(--h-line);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;min-height:80px}
+.brand{display:inline-flex;align-items:center;flex-shrink:0}
+.brand-mark{width:min(240px,50vw);height:auto;filter:drop-shadow(0 0 22px rgba(125,255,106,.14))}
+.main-nav{display:flex;align-items:center;gap:2.2rem;font-size:.72rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--h-muted)}
+.main-nav a{transition:color var(--h-ease)}
+.main-nav a:hover,.main-nav a:focus-visible{color:var(--h-text)}
+.nav-cta{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 1.5rem;border-radius:999px;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:linear-gradient(135deg,var(--h-accent),var(--h-accent-strong));color:#040404 !important;flex-shrink:0;transition:transform var(--h-ease),box-shadow var(--h-ease)}
+.nav-cta:hover,.nav-cta:focus-visible{transform:translateY(-1px);box-shadow:0 8px 28px rgba(125,255,106,.22)}
+.nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:42px;height:42px;background:transparent;border:1px solid var(--h-line);border-radius:12px;cursor:pointer;padding:0 10px;flex-shrink:0;z-index:110;position:relative}
+.nav-toggle span{display:block;height:1.5px;background:var(--h-text);border-radius:2px;transition:transform .3s ease,opacity .3s ease}
+.nav-toggle.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav-toggle.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.nav-toggle.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mobile-nav{position:fixed;inset:0;z-index:100;background:rgba(3,3,3,.97);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.2rem;opacity:0;pointer-events:none;transition:opacity .3s ease}
+.mobile-nav.open{opacity:1;pointer-events:all}
+.mobile-nav a{font-size:2rem;font-weight:700;letter-spacing:-.03em;color:var(--h-muted);transition:color var(--h-ease)}
+.mobile-nav a:hover{color:var(--h-text)}
+.mobile-nav .mobile-cta{margin-top:1rem;font-size:.78rem;color:#040404}
+.site-footer{background:#060606;border-top:1px solid var(--h-line)}
+.site-footer p{margin:0;max-width:none;line-height:1.72}
+.footer-top{padding:4rem 0 3rem;display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:start;border-bottom:1px solid var(--h-line)}
+.footer-brand .brand-mark{width:min(190px,44vw);margin-bottom:1.1rem}
+.footer-brand p{font-size:.88rem;max-width:300px;color:var(--h-muted-2)}
+.footer-brand p + p{margin-top:.8rem}
+.footer-brand a{color:var(--h-text);font-weight:600}
+.footer-links-group{display:flex;gap:4.5rem}
+.footer-col h4{margin:0 0 1.2rem;font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--h-muted-2);line-height:1.04}
+.footer-col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.65rem}
+.footer-col a{font-size:.9rem;color:var(--h-muted);transition:color var(--h-ease)}
+.footer-col a:hover{color:var(--h-text)}
+.footer-bottom{padding:1.6rem 0;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.footer-bottom p{font-size:.7rem;color:var(--h-muted-2)}
+.footer-bottom-links{display:flex;gap:1.8rem}
+.footer-bottom-links a{font-size:.7rem;color:var(--h-muted-2);transition:color var(--h-ease)}
+.footer-bottom-links a:hover{color:var(--h-muted)}
+.call-bar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:95;gap:.6rem;padding:.7rem 1rem calc(.7rem + env(safe-area-inset-bottom));background:rgba(5,5,5,.94);border-top:1px solid var(--h-line);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.call-bar .button{flex:1;min-height:48px;padding:0 1rem}
+@media (max-width:1060px){.footer-top{grid-template-columns:1fr}}
+@media (max-width:900px){.footer-links-group{flex-direction:column;gap:2.2rem}}
+@media (max-width:760px){
+  .main-nav,.nav-cta{display:none}
+  .nav-toggle{display:flex}
+  .footer-top{padding:2.8rem 0 2.2rem}
+  .call-bar{display:flex}
+  body{padding-bottom:76px}
+}
+@media (max-width:480px){.footer-bottom{flex-direction:column;align-items:flex-start}}
+
+.btn{display:inline-block;font:600 1.05rem/1 var(--display);letter-spacing:.03em;padding:14px 22px;border-radius:4px;text-decoration:none;border:2px solid var(--green);cursor:pointer}
+.btn.solid{background:var(--green);color:#041000}
+.btn.ghost{color:var(--text);background:transparent}
+.btn:hover{background:var(--green-dim);border-color:var(--green-dim);color:#fff}
+
+/* hero with parkade plan */
+.hero{padding:64px 0 40px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.hero p.lead{font-size:1.2rem;color:#cfd5cf}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.parkade{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:20px}
+.parkade svg{width:100%;height:auto}
+.parkade figcaption{color:var(--muted);font-size:.9rem;margin-top:10px}
+.stall{fill:none;stroke:#3a403a;stroke-width:2}
+.stall.on{stroke:var(--green)}
+.plug{fill:var(--green)}
+@media (prefers-reduced-motion:no-preference){
+  .plug{opacity:0;animation:light .5s ease forwards}
+  .plug:nth-of-type(2){animation-delay:.25s}.plug:nth-of-type(3){animation-delay:.5s}
+  .plug:nth-of-type(4){animation-delay:.75s}.plug:nth-of-type(5){animation-delay:1s}
+  .plug:nth-of-type(6){animation-delay:1.25s}
+  @keyframes light{to{opacity:1}}
+}
+
+section{padding:64px 0;border-top:1px solid var(--line)}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.cols h3{color:var(--green)}
+
+/* capacity callout */
+.capacity .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.facts{border-left:3px solid var(--green);padding-left:24px}
+.facts dt{font:600 1.25rem/1.2 var(--display);margin-top:18px}
+.facts dt:first-child{margin-top:0}
+.facts dd{margin:4px 0 0;color:#cfd5cf}
+
+/* process */
+ol.steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:s}
+ol.steps li{counter-increment:s;border-top:3px solid var(--green);padding-top:14px}
+ol.steps li::before{content:counter(s);font:700 2.4rem/1 var(--display);color:var(--green);display:block;margin-bottom:8px}
+ol.steps p{color:#cfd5cf;font-size:.98rem}
+
+/* incentives */
+.incent{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:28px}
+.status{display:inline-block;font-size:.85rem;font-weight:600;padding:4px 10px;border-radius:999px;margin-bottom:12px}
+.status.wait{background:#2b2a12;color:#e7d76b}
+.status.open{background:#11290d;color:#7ee36f}
+.card ul{padding-left:20px;margin:0 0 12px}
+.card li{margin-bottom:6px}
+.note{color:var(--muted);font-size:.9rem}
+
+/* proof */
+.proof{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:16px}
+.proof figure{margin:0;background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.proof img{aspect-ratio:4/3;object-fit:cover;width:100%;background:#1b1e1b}
+.proof figcaption{padding:12px 14px;font-size:.95rem}
+.proof figcaption b{font-family:var(--display);font-size:1.15rem;display:block}
+
+/* faq */
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{font:600 1.3rem/1.3 var(--display);cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--green);font-size:1.6rem;line-height:1}
+details[open] summary::after{content:"\2013"}
+details p{margin-top:12px;color:#cfd5cf}
+
+/* form */
+.ask .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:flex;flex-direction:column;gap:6px;font-size:.92rem;color:#cfd5cf}
+label.full{grid-column:1/-1}
+input,select,textarea{font:inherit;color:var(--text);background:var(--panel);border:1px solid #3a403a;border-radius:4px;padding:11px 12px}
+input:focus,select:focus,textarea:focus{border-color:var(--green);outline:none}
+.form-msg{grid-column:1/-1;font-size:.92rem;color:var(--muted);margin:0}
+
+
+@media (max-width:900px){
+  .hero .wrap,.capacity .wrap,.ask .wrap,.incent{grid-template-columns:1fr}
+  .cols{grid-template-columns:1fr}
+  ol.steps{grid-template-columns:1fr 1fr}
+  .proof{grid-template-columns:1fr}
+}
+@media (max-width:560px){ol.steps,form{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"Service",
+ "name":"Condo and apartment EV charging installation",
+ "serviceType":"Multi-unit residential EV charging",
+ "provider":{"@type":"Electrician","name":"Protos Electrical","url":"https://protoselectrical.ca/","telephone":"+1-780-803-2868"},
+ "areaServed":{"@type":"City","name":"Calgary"},
+ "description":"Load calculations, EV energy management systems, service upgrades and Level 2 charger installs for condos, apartments and townhouse complexes in Calgary and area."
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"FAQPage",
+ "mainEntity":[
+  {"@type":"Question","name":"Does our building need a new electrical service before we add EV charging?","acceptedAnswer":{"@type":"Answer","text":"Often not. A load calculation shows how much spare capacity the building has. An EV energy management system lets several chargers share that capacity, which can delay or shrink a service upgrade."}},
+  {"@type":"Question","name":"Can one owner install a charger in their own stall?","acceptedAnswer":{"@type":"Answer","text":"In most condos the parkade electrical is common property, so the board has to approve it first. A building-wide plan usually costs less per stall than approving one-off installs."}},
+  {"@type":"Question","name":"Who pays for the electricity a charger uses?","acceptedAnswer":{"@type":"Answer","text":"That is a board decision. Networked chargers can track each user's energy so it can be billed back; simpler setups use a flat fee. We explain the options and their costs so the board can choose."}},
+  {"@type":"Question","name":"Do you write the EV Charging Road Map for ChargeYYC?","acceptedAnswer":{"@type":"Answer","text":"For Calgary's ChargeYYC program the road map must be stamped by an Alberta Professional Engineer, so we work alongside an engineer and handle pricing and installation. For Canmore's EV Readiness Plan incentive, a Master Electrician can complete the plan."}}
+ ]
+}
+</script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container topbar-inner">
+    <div class="topbar-meta">
+      <span>Calgary &amp; area</span>
+      <span>Mon–Fri 7am–4pm</span>
+    </div>
+    <div class="topbar-meta">
+      <a href="tel:+17808032868">780-803-2868</a>
+      <a href="mailto:info@protoselectrical.ca">info@protoselectrical.ca</a>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="brand" aria-label="Protos Electrical — home">
+      <img class="brand-mark" src="/assets/protos-logo.png" alt="Protos Electrical">
+    </a>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a href="/#services">Services</a>
+      <a href="/#family">Family</a>
+      <a href="/#process">Process</a>
+      <a href="/#projects">Projects</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="tel:+17808032868">Call 780-803-2868</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobile-nav" aria-hidden="true" role="dialog" aria-label="Mobile navigation">
+  <a href="/#services">Services</a>
+  <a href="/#family">Family</a>
+  <a href="/#process">Process</a>
+  <a href="/#projects">Projects</a>
+  <a href="/#contact">Contact</a>
+  <a class="button button-primary mobile-cta" href="tel:+17808032868">Call 780-803-2868</a>
+</div>
+
+<main>
+<section class="hero" style="border-top:0">
+  <div class="wrap">
+    <div>
+      <h1>EV charging for condos and apartments in Calgary</h1>
+      <p class="lead">Owners are asking for chargers. Before your board approves anything, you need to know what the building's electrical can actually carry. We start there, then give you a plan, a firm price, and an install your inspector signs off.</p>
+      <div class="actions">
+        <a class="btn solid" href="#assessment">Request a building assessment</a>
+        <a class="btn ghost" href="tel:+17808032868">Call 780-803-2868</a>
+      </div>
+    </div>
+    <figure class="parkade" aria-label="Parkade plan with EV-ready stalls">
+      <svg viewBox="0 0 420 260" role="img" aria-labelledby="pk">
+        <title id="pk">Twelve parking stalls, six of them wired EV-ready from one shared panel</title>
+        <rect x="10" y="10" width="400" height="240" fill="none" stroke="#262a26" stroke-width="2"/>
+        <g>
+          <rect class="stall on" x="30" y="30" width="56" height="90"/><rect class="stall on" x="92" y="30" width="56" height="90"/>
+          <rect class="stall on" x="154" y="30" width="56" height="90"/><rect class="stall" x="216" y="30" width="56" height="90"/>
+          <rect class="stall" x="278" y="30" width="56" height="90"/><rect class="stall" x="340" y="30" width="56" height="90"/>
+          <rect class="stall on" x="30" y="140" width="56" height="90"/><rect class="stall on" x="92" y="140" width="56" height="90"/>
+          <rect class="stall on" x="154" y="140" width="56" height="90"/><rect class="stall" x="216" y="140" width="56" height="90"/>
+          <rect class="stall" x="278" y="140" width="56" height="90"/><rect class="stall" x="340" y="140" width="56" height="90"/>
+        </g>
+        <path d="M 395 130 H 20 M 58 120 V 130 M 120 120 V 130 M 182 120 V 130 M 58 140 V 130 M 120 140 V 130 M 182 140 V 130" stroke="#12B800" stroke-width="2" fill="none" stroke-dasharray="5 4"/>
+        <g>
+          <circle class="plug" cx="58" cy="44" r="6"/><circle class="plug" cx="120" cy="44" r="6"/><circle class="plug" cx="182" cy="44" r="6"/>
+          <circle class="plug" cx="58" cy="216" r="6"/><circle class="plug" cx="120" cy="216" r="6"/><circle class="plug" cx="182" cy="216" r="6"/>
+        </g>
+        <rect x="372" y="118" width="30" height="24" fill="#121412" stroke="#12B800" stroke-width="2"/>
+        <text x="387" y="134" fill="#9aa39a" font-size="9" text-anchor="middle" font-family="Arial">EVEMS</text>
+      </svg>
+      <figcaption>Six stalls sharing one circuit through energy management. More can be added later without reworking the parkade.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Who we work with</h2>
+    <div class="cols">
+      <div><h3>Condo boards</h3><p>You need clear answers for owners, a cost the reserve fund can handle, and a plan that won't need redoing in five years.</p></div>
+      <div><h3>Property managers</h3><p>One contractor who handles the load calc, permits, utility coordination and inspection, and keeps you updated without chasing.</p></div>
+      <div><h3>Rental building owners</h3><p>EV-ready stalls help with leasing. We size the work so you add chargers as tenants ask, not all at once.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="capacity">
+  <div class="wrap">
+    <div>
+      <h2>Capacity comes first</h2>
+      <p>The most expensive mistake is installing chargers one owner at a time until the main service runs out. The second most expensive is upgrading the service when the building didn't need it.</p>
+      <p>We calculate the building's demand load to the Canadian Electrical Code, look at actual utility demand data, and show the board exactly how many stalls it can support today and what it would take to get further.</p>
+    </div>
+    <dl class="facts">
+      <dt>Load calculation</dt><dd>Spare capacity in kW, from your panel schedules and utility demand history.</dd>
+      <dt>EV energy management (EVEMS)</dt><dd>Lets several chargers share one circuit by managing when and how fast each one charges.</dd>
+      <dt>EV-ready stalls</dt><dd>A junction box or receptacle at each stall, so owners can add their own charger later.</dd>
+      <dt>Service upgrade, if needed</dt><dd>Designed, permitted and coordinated with the utility. We've installed new services up to 1600 A.</dd>
+    </dl>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>How a building project runs</h2>
+    <ol class="steps">
+      <li><h3>Site assessment</h3><p>We review the electrical room, panel schedules, parkade layout and utility bills.</p></li>
+      <li><h3>Plan and firm price</h3><p>Stall count, phasing and a fixed price, written so the board can read it.</p></li>
+      <li><h3>Board approval</h3><p>We'll join a board meeting or AGM to answer owners' questions, and supply what rebate applications ask for.</p></li>
+      <li><h3>Install and inspection</h3><p>Permitted, inspected and documented, with the parkade kept usable during the work.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Rebates and incentives</h2>
+    <div class="incent">
+      <article class="card">
+        <span class="status wait">Calgary: waiting for next intake</span>
+        <h3>ChargeYYC (City of Calgary)</h3>
+        <p>The pilot paid 50% of EV-ready infrastructure costs (up to $6,000 per stall) and 50% of Level 2 chargers, to a combined maximum of $100,000 per property. The last intake closed in November 2025 and the City expects to reopen.</p>
+        <ul>
+          <li>Requires an EV Charging Road Map stamped by an Alberta Professional Engineer. We work with engineers and supply pricing and installation.</li>
+          <li>Buildings with a plan ready will be first in line when it reopens.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <span class="status open">Canmore: 2026 program</span>
+        <h3>Canmore EV Readiness Plan incentive</h3>
+        <p>The Town covers 75% of the cost of an EV Readiness Plan for a multi-family building, up to $5,000. A Master Electrician is qualified to complete the plan.</p>
+        <ul>
+          <li>Only plan fees incurred before December 15, 2026 qualify.</li>
+          <li>Ask us for the fixed-fee quote your application needs.</li>
+        </ul>
+      </article>
+    </div>
+    <p class="note" style="margin-top:16px">Program details as of October 2026. Funding is limited and terms change, so confirm with the City of Calgary or the Town of Canmore before applying.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Multi-unit work we've done</h2>
+    <div class="proof">
+      <figure>
+        <img src="/assets/projects/emt-suite-feeders.jpg" alt="EMT conduit runs for suite feeders along a corridor ceiling" loading="lazy">
+        <figcaption><b>15-unit re-wire, Beltline</b>Full re-wire in EMT with a new electrical service.</figcaption>
+      </figure>
+      <figure>
+        <img src="/assets/projects/meter-stack-condo.jpg" alt="Multi-unit meter stack installed in a condo electrical room" loading="lazy">
+        <figcaption><b>Condo meter stack</b>Multi-family electrical room.</figcaption>
+      </figure>
+      <figure>
+        <img src="/assets/projects/ev-charger-pipe.jpg" alt="EV charger mounted in a garage with conduit run" loading="lazy">
+        <figcaption><b>Level 2 charger install</b>Surface conduit, permitted and inspected.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap" style="max-width:820px">
+    <h2>Common questions</h2>
+    <details><summary>Does our building need a new electrical service first?</summary><p>Often not. A load calculation shows how much spare capacity the building has. Energy management lets several chargers share that capacity, which can delay or shrink a service upgrade.</p></details>
+    <details><summary>Can one owner install a charger in their own stall?</summary><p>In most condos the parkade electrical is common property, so the board has to approve it first. A building-wide plan usually costs less per stall than approving one-off installs.</p></details>
+    <details><summary>Who pays for the electricity a charger uses?</summary><p>That's a board decision. Networked chargers can track each user's energy so it can be billed back; simpler setups use a flat fee. We explain the options and their costs so the board can choose.</p></details>
+    <details><summary>Do you write the ChargeYYC road map?</summary><p>For Calgary's program, the road map has to be stamped by an Alberta Professional Engineer, so we work alongside an engineer and handle pricing and installation. For Canmore's incentive, a Master Electrician can complete the plan, so we can do it directly.</p></details>
+    <details><summary>What areas do you cover?</summary><p>Calgary and area, Monday to Friday, 7am to 4pm.</p></details>
+  </div>
+</section>
+
+<section class="ask" id="assessment">
+  <div class="wrap">
+    <div>
+      <h2>Request a building assessment</h2>
+      <p>Tell us about the building. The more we know up front, the more useful the first visit is.</p>
+      <p>Prefer to talk? Call <a href="tel:+17808032868">780-803-2868</a> or email <a href="mailto:info@protoselectrical.ca">info@protoselectrical.ca</a>.</p>
+    </div>
+    <form id="evform" novalidate>
+      <label>Your name<input name="name" required autocomplete="name"></label>
+      <label>Phone or email<input name="contact" required></label>
+      <label>Your role
+        <select name="role"><option>Condo board member</option><option>Property manager</option><option>Building owner</option><option>Resident / owner</option></select>
+      </label>
+      <label>Building type
+        <select name="type"><option>Apartment / condo (parkade)</option><option>Townhouse complex</option><option>Rental building</option><option>Mixed-use</option></select>
+      </label>
+      <label>Number of units<input name="units" inputmode="numeric"></label>
+      <label>Number of parking stalls<input name="stalls" inputmode="numeric"></label>
+      <label>Owners asking for EV charging<input name="requests" inputmode="numeric" placeholder="Approximate"></label>
+      <label>Location<input name="location" placeholder="Community or address"></label>
+      <label class="full">Anything else (age of building, existing chargers, timeline)<textarea name="notes" rows="4"></textarea></label>
+      <button class="btn solid" type="submit">Send building details</button>
+      <p class="form-msg" id="msg" role="status">This opens your email app with the details filled in.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img class="brand-mark" src="/assets/protos-logo.png" alt="Protos Electrical" style="width: min(180px, 42vw);">
+        <p>Family-owned electrical contractor serving Calgary and area.</p>
+        <p><a href="tel:+17808032868">780-803-2868</a><br>Mon–Fri, 7am–4pm</p>
+      </div>
+      <div class="footer-links-group">
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/#services">EV Chargers</a></li>
+            <li><a href="/condo-ev-charging">Condo &amp; multi-unit EV charging</a></li>
+            <li><a href="/#services">New Services</a></li>
+            <li><a href="/#services">Tenant Improvements</a></li>
+            <li><a href="/#services">Hot Tubs</a></li>
+            <li><a href="/#services">Residential &amp; Commercial Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/#process">How we work</a></li>
+            <li><a href="/#projects">Projects</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Protos Electrical. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="https://g.page/r/Cb3orosDe9P_EBM/review" target="_blank" rel="noopener">Review us on Google</a>
+        <a href="mailto:info@protoselectrical.ca">info@protoselectrical.ca</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="call-bar">
+  <a class="button button-primary" href="tel:+17808032868">Call now</a>
+  <a class="button button-secondary" href="mailto:info@protoselectrical.ca?subject=Site%20Visit%20Request">Email</a>
+</div>
+
+<script>
+(function(){
+  var toggle=document.getElementById('nav-toggle'), nav=document.getElementById('mobile-nav');
+  if(!toggle||!nav)return;
+  function setOpen(open){
+    toggle.classList.toggle('open',open);nav.classList.toggle('open',open);
+    nav.setAttribute('aria-hidden',String(!open));toggle.setAttribute('aria-expanded',String(open));
+    toggle.setAttribute('aria-label',open?'Close navigation':'Open navigation');
+    document.body.style.overflow=open?'hidden':'';
+  }
+  toggle.addEventListener('click',function(){setOpen(!toggle.classList.contains('open'));});
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setOpen(false);});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&nav.classList.contains('open'))setOpen(false);});
+})();
+document.getElementById('evform').addEventListener('submit',function(e){
+  e.preventDefault();
+  var f=this, msg=document.getElementById('msg');
+  if(!f.name.value.trim()||!f.contact.value.trim()){msg.textContent='Add your name and a phone number or email so we can reply.';msg.style.color='#e7d76b';return;}
+  var body=['Name: '+f.name.value,'Contact: '+f.contact.value,'Role: '+f.role.value,'Building type: '+f.type.value,'Units: '+f.units.value,'Stalls: '+f.stalls.value,'Owners asking for EV: '+f.requests.value,'Location: '+f.location.value,'','Notes: '+f.notes.value].join('\n');
+  window.location.href='mailto:info@protoselectrical.ca?subject='+encodeURIComponent('Building EV assessment request')+'&body='+encodeURIComponent(body);
+  msg.textContent='Your email app should open with the details filled in. If it doesn\'t, email info@protoselectrical.ca.';msg.style.color='';
+});
+</script>
+</body>
+</html>
