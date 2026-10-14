@@ -4,22 +4,33 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Condo & Apartment EV Charging in Calgary | Protos Electrical</title>
-<meta name="description" content="EV charging for Calgary condos, apartments and townhouse complexes. Load calculations, EV energy management, service upgrades and Level 2 installs by a Master Electrician-owned contractor. Call 780-803-2868.">
+<meta name="description" content="EV charging for Calgary condos and apartments: load calculations, energy management and Level 2 installs. Master Electrician owned. Call 780-803-2868.">
 <link rel="canonical" href="https://protoselectrical.ca/condo-ev-charging">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://protoselectrical.ca/condo-ev-charging">
+<meta property="og:site_name" content="Protos Electrical">
+<meta property="og:locale" content="en_CA">
 <meta property="og:title" content="Condo & Apartment EV Charging in Calgary | Protos Electrical">
 <meta property="og:description" content="Get your building EV-ready without guessing. Capacity first, then a plan your board can approve.">
-<meta property="og:image" content="https://protoselectrical.ca/assets/projects/meter-stack-condo.jpg">
+<meta property="og:image" content="https://protoselectrical.ca/assets/og/og-condo-ev.jpg">
+<meta property="og:image:width" content="1000">
+<meta property="og:image:height" content="525">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Condo & Apartment EV Charging in Calgary | Protos Electrical">
+<meta name="twitter:description" content="Get your building EV-ready without guessing. Capacity first, then a plan your board can approve.">
+<meta name="twitter:image" content="https://protoselectrical.ca/assets/og/og-condo-ev.jpg">
 <meta name="theme-color" content="#050505">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" href="/assets/protos-logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-64.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <style>
 :root{
-  --ink:#050505; --panel:#121412; --line:#262a26; --text:#e9ece8; --muted:#9aa39a;
-  --green:#12B800; --green-dim:#0d7f00;
-  --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
-  --body:"Barlow",Arial,Helvetica,sans-serif;
+  --ink:#050505; --panel:#111111; --line:#222222; --text:#f3f3f3; --muted:#999999;
+  --green:#7dff6a; --green-dim:#50d952;
+  --display:'Inter',Arial,sans-serif;
+  --body:'Inter',Arial,sans-serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -28,15 +39,15 @@ img{max-width:100%;display:block}
 a{color:var(--green)}
 :focus-visible{outline:3px solid var(--green);outline-offset:3px}
 .wrap{width:min(1120px,100% - 40px);margin-inline:auto}
-h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.05;margin:0 0 .5em;letter-spacing:.01em}
-h1{font-size:clamp(2.6rem,6vw,4.6rem)}
-h2{font-size:clamp(2rem,4vw,2.9rem)}
-h3{font-size:1.45rem;font-weight:600}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.04;margin:0 0 .5em;letter-spacing:-.035em;text-wrap:balance}
+h1{font-size:clamp(2.4rem,5vw,4.2rem)}
+h2{font-size:clamp(1.9rem,3.4vw,2.8rem)}
+h3{font-size:1.3rem;font-weight:700;letter-spacing:-.02em}
 p{margin:0 0 1em;max-width:66ch}
 
 /* header + footer: same as the homepage */
 .topbar,.site-header,.mobile-nav,.site-footer,.call-bar{
-  --h-panel:#111111; --h-line:#222222; --h-text:#f3f3f3; --h-muted:#999999; --h-muted-2:#5a5a5a;
+  --h-panel:#111111; --h-line:#222222; --h-text:#f3f3f3; --h-muted:#999999; --h-muted-2:#858585;
   --h-accent:#7dff6a; --h-accent-strong:#50d952; --h-ease:.22s ease;
   font-family:'Inter',Arial,sans-serif;line-height:1.6;
 }
@@ -64,8 +75,8 @@ p{margin:0 0 1em;max-width:66ch}
 .nav-toggle.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
 .nav-toggle.open span:nth-child(2){opacity:0;transform:scaleX(0)}
 .nav-toggle.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
-.mobile-nav{position:fixed;inset:0;z-index:100;background:rgba(3,3,3,.97);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.2rem;opacity:0;pointer-events:none;transition:opacity .3s ease}
-.mobile-nav.open{opacity:1;pointer-events:all}
+.mobile-nav{position:fixed;inset:0;z-index:100;background:rgba(3,3,3,.97);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.2rem;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .3s ease,visibility 0s linear .3s}
+.mobile-nav.open{opacity:1;visibility:visible;pointer-events:all;transition:opacity .3s ease}
 .mobile-nav a{font-size:2rem;font-weight:700;letter-spacing:-.03em;color:var(--h-muted);transition:color var(--h-ease)}
 .mobile-nav a:hover{color:var(--h-text)}
 .mobile-nav .mobile-cta{margin-top:1rem;font-size:.78rem;color:#040404}
@@ -102,10 +113,11 @@ p{margin:0 0 1em;max-width:66ch}
 }
 @media (max-width:480px){.footer-bottom{flex-direction:column;align-items:flex-start}}
 
-.btn{display:inline-block;font:600 1.05rem/1 var(--display);letter-spacing:.03em;padding:14px 22px;border-radius:4px;text-decoration:none;border:2px solid var(--green);cursor:pointer}
-.btn.solid{background:var(--green);color:#041000}
-.btn.ghost{color:var(--text);background:transparent}
-.btn:hover{background:var(--green-dim);border-color:var(--green-dim);color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 1.85rem;border-radius:999px;font:700 .76rem/1.2 var(--body);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+.btn.solid{background:linear-gradient(135deg,var(--green),var(--green-dim));color:#040404}
+.btn.ghost{color:var(--text);background:transparent;border-color:var(--line)}
+.btn.solid:hover,.btn.solid:focus-visible{transform:translateY(-2px);box-shadow:0 16px 40px rgba(125,255,106,.28)}
+.btn.ghost:hover,.btn.ghost:focus-visible{transform:translateY(-2px);border-color:rgba(255,255,255,.22)}
 
 /* hero with parkade plan */
 .hero{padding:64px 0 40px}
@@ -192,8 +204,8 @@ input:focus,select:focus,textarea:focus{border-color:var(--green);outline:none}
  "@type":"Service",
  "name":"Condo and apartment EV charging installation",
  "serviceType":"Multi-unit residential EV charging",
- "provider":{"@type":"Electrician","name":"Protos Electrical","url":"https://protoselectrical.ca/","telephone":"+1-780-803-2868"},
- "areaServed":{"@type":"City","name":"Calgary"},
+ "provider":{"@type":"Electrician","@id":"https://protoselectrical.ca/#business","name":"Protos Electrical","url":"https://protoselectrical.ca/","telephone":"+1-780-803-2868"},
+ "areaServed":[{"@type":"City","name":"Calgary"},{"@type":"City","name":"Cochrane"},{"@type":"City","name":"Airdrie"},{"@type":"Place","name":"Aldersyde"},{"@type":"City","name":"Okotoks"},{"@type":"City","name":"Canmore"}],
  "description":"Load calculations, EV energy management systems, service upgrades and Level 2 charger installs for condos, apartments and townhouse complexes in Calgary and area."
 }
 </script>
@@ -205,7 +217,8 @@ input:focus,select:focus,textarea:focus{border-color:var(--green);outline:none}
   {"@type":"Question","name":"Does our building need a new electrical service before we add EV charging?","acceptedAnswer":{"@type":"Answer","text":"Often not. A load calculation shows how much spare capacity the building has. An EV energy management system lets several chargers share that capacity, which can delay or shrink a service upgrade."}},
   {"@type":"Question","name":"Can one owner install a charger in their own stall?","acceptedAnswer":{"@type":"Answer","text":"In most condos the parkade electrical is common property, so the board has to approve it first. A building-wide plan usually costs less per stall than approving one-off installs."}},
   {"@type":"Question","name":"Who pays for the electricity a charger uses?","acceptedAnswer":{"@type":"Answer","text":"That is a board decision. Networked chargers can track each user's energy so it can be billed back; simpler setups use a flat fee. We explain the options and their costs so the board can choose."}},
-  {"@type":"Question","name":"Do you write the EV Charging Road Map for ChargeYYC?","acceptedAnswer":{"@type":"Answer","text":"For Calgary's ChargeYYC program the road map must be stamped by an Alberta Professional Engineer, so we work alongside an engineer and handle pricing and installation. For Canmore's EV Readiness Plan incentive, a Master Electrician can complete the plan."}}
+  {"@type":"Question","name":"Do you write the EV Charging Road Map for ChargeYYC?","acceptedAnswer":{"@type":"Answer","text":"The City's ChargeYYC page says the road map must be completed by a Professional Engineer licensed in Alberta, so we work alongside an engineer and handle pricing and installation. The program is closed for now; we'll confirm the rules when it reopens."}},
+  {"@type":"Question","name":"What areas do you cover?","acceptedAnswer":{"@type":"Answer","text":"Calgary, Cochrane, Airdrie, Aldersyde, Okotoks and Canmore, Monday to Friday, 7am to 4pm."}}
  ]
 }
 </script>
@@ -278,12 +291,12 @@ input:focus,select:focus,textarea:focus{border-color:var(--green);outline:none}
           <rect class="stall on" x="154" y="140" width="56" height="90"/><rect class="stall" x="216" y="140" width="56" height="90"/>
           <rect class="stall" x="278" y="140" width="56" height="90"/><rect class="stall" x="340" y="140" width="56" height="90"/>
         </g>
-        <path d="M 395 130 H 20 M 58 120 V 130 M 120 120 V 130 M 182 120 V 130 M 58 140 V 130 M 120 140 V 130 M 182 140 V 130" stroke="#12B800" stroke-width="2" fill="none" stroke-dasharray="5 4"/>
+        <path d="M 395 130 H 20 M 58 120 V 130 M 120 120 V 130 M 182 120 V 130 M 58 140 V 130 M 120 140 V 130 M 182 140 V 130" stroke="#7dff6a" stroke-width="2" fill="none" stroke-dasharray="5 4"/>
         <g>
           <circle class="plug" cx="58" cy="44" r="6"/><circle class="plug" cx="120" cy="44" r="6"/><circle class="plug" cx="182" cy="44" r="6"/>
           <circle class="plug" cx="58" cy="216" r="6"/><circle class="plug" cx="120" cy="216" r="6"/><circle class="plug" cx="182" cy="216" r="6"/>
         </g>
-        <rect x="372" y="118" width="30" height="24" fill="#121412" stroke="#12B800" stroke-width="2"/>
+        <rect x="372" y="118" width="30" height="24" fill="#111111" stroke="#7dff6a" stroke-width="2"/>
         <text x="387" y="134" fill="#9aa39a" font-size="9" text-anchor="middle" font-family="Arial">EVEMS</text>
       </svg>
       <figcaption>Six stalls sharing one circuit through energy management. More can be added later without reworking the parkade.</figcaption>
@@ -337,19 +350,19 @@ input:focus,select:focus,textarea:focus{border-color:var(--green);outline:none}
       <article class="card">
         <span class="status wait">Calgary: waiting for next intake</span>
         <h3>ChargeYYC (City of Calgary)</h3>
-        <p>The pilot paid 50% of EV-ready infrastructure costs (up to $6,000 per stall) and 50% of Level 2 chargers, to a combined maximum of $100,000 per property. The last intake closed in November 2025 and the City expects to reopen.</p>
+        <p>The pilot paid 50% of EV-ready infrastructure costs (up to $6,000 per stall, $90,000 maximum) and 50% of Level 2 chargers (up to $10,000), to a combined maximum of $100,000 per property. The last intake closed on November 18, 2025, and the City says it expects to take more applications in future.</p>
         <ul>
-          <li>Requires an EV Charging Road Map stamped by an Alberta Professional Engineer. We work with engineers and supply pricing and installation.</li>
-          <li>Buildings with a plan ready will be first in line when it reopens.</li>
+          <li>The City's program page says the EV Charging Road Map must be completed by a Professional Engineer licensed in Alberta. We work with engineers and supply pricing and installation.</li>
+          <li>A building that already knows its capacity and stall plan can apply quickly when it reopens.</li>
         </ul>
       </article>
       <article class="card">
-        <span class="status open">Canmore: 2026 program</span>
+        <span class="status wait">Canmore: 2026 intake closed</span>
         <h3>Canmore EV Readiness Plan incentive</h3>
-        <p>The Town covers 75% of the cost of an EV Readiness Plan for a multi-family building, up to $5,000. A Master Electrician is qualified to complete the plan.</p>
+        <p>The Town's 2026 program covered 75% of the cost of an EV Readiness Plan for a multi-family building, up to $5,000. Applications closed on March 31, 2026.</p>
         <ul>
-          <li>Only plan fees incurred before December 15, 2026 qualify.</li>
-          <li>Ask us for the fixed-fee quote your application needs.</li>
+          <li>If your building was selected, plan fees must be incurred by December 15, 2026.</li>
+          <li>Ask the Town about future intakes. We can price the installation work a plan calls for.</li>
         </ul>
       </article>
     </div>
@@ -363,7 +376,7 @@ input:focus,select:focus,textarea:focus{border-color:var(--green);outline:none}
     <div class="proof">
       <figure>
         <img src="/assets/projects/emt-suite-feeders.jpg" alt="EMT conduit runs for suite feeders along a corridor ceiling" loading="lazy">
-        <figcaption><b>15-unit re-wire, Beltline</b>Full re-wire in EMT with a new electrical service.</figcaption>
+        <figcaption><b>15-unit re-wire, Beltline</b>Full re-wire in EMT with a new electrical service. We took the job over from two previous contractors and finished it.</figcaption>
       </figure>
       <figure>
         <img src="/assets/projects/meter-stack-condo.jpg" alt="Multi-unit meter stack installed in a condo electrical room" loading="lazy">
@@ -383,8 +396,8 @@ input:focus,select:focus,textarea:focus{border-color:var(--green);outline:none}
     <details><summary>Does our building need a new electrical service first?</summary><p>Often not. A load calculation shows how much spare capacity the building has. Energy management lets several chargers share that capacity, which can delay or shrink a service upgrade.</p></details>
     <details><summary>Can one owner install a charger in their own stall?</summary><p>In most condos the parkade electrical is common property, so the board has to approve it first. A building-wide plan usually costs less per stall than approving one-off installs.</p></details>
     <details><summary>Who pays for the electricity a charger uses?</summary><p>That's a board decision. Networked chargers can track each user's energy so it can be billed back; simpler setups use a flat fee. We explain the options and their costs so the board can choose.</p></details>
-    <details><summary>Do you write the ChargeYYC road map?</summary><p>For Calgary's program, the road map has to be stamped by an Alberta Professional Engineer, so we work alongside an engineer and handle pricing and installation. For Canmore's incentive, a Master Electrician can complete the plan, so we can do it directly.</p></details>
-    <details><summary>What areas do you cover?</summary><p>Calgary and area, Monday to Friday, 7am to 4pm.</p></details>
+    <details><summary>Do you write the ChargeYYC road map?</summary><p>The City's ChargeYYC page says the road map must be completed by a Professional Engineer licensed in Alberta, so we work alongside an engineer and handle pricing and installation. The program is closed for now; we'll confirm the rules when it reopens.</p></details>
+    <details><summary>What areas do you cover?</summary><p>Calgary, Cochrane, Airdrie, Aldersyde, Okotoks and Canmore, Monday to Friday, 7am to 4pm.</p></details>
   </div>
 </section>
 
@@ -421,7 +434,7 @@ input:focus,select:focus,textarea:focus{border-color:var(--green);outline:none}
     <div class="footer-top">
       <div class="footer-brand">
         <img class="brand-mark" src="/assets/protos-logo.png" alt="Protos Electrical" style="width: min(180px, 42vw);">
-        <p>Family-owned electrical contractor serving Calgary and area.</p>
+        <p>Family-owned electrical contractor serving Calgary, Cochrane, Airdrie, Aldersyde, Okotoks and Canmore.</p>
         <p><a href="tel:+17808032868">780-803-2868</a><br>Mon–Fri, 7am–4pm</p>
       </div>
       <div class="footer-links-group">
@@ -433,6 +446,8 @@ input:focus,select:focus,textarea:focus{border-color:var(--green);outline:none}
             <li><a href="/#services">New Services</a></li>
             <li><a href="/#services">Tenant Improvements</a></li>
             <li><a href="/#services">Hot Tubs</a></li>
+            <li><a href="/#services">Load Management</a></li>
+            <li><a href="/#services">Lighting Control</a></li>
             <li><a href="/#services">Residential &amp; Commercial Service</a></li>
           </ul>
         </div>
@@ -477,9 +492,9 @@ input:focus,select:focus,textarea:focus{border-color:var(--green);outline:none}
 })();
 document.getElementById('evform').addEventListener('submit',function(e){
   e.preventDefault();
-  var f=this, msg=document.getElementById('msg');
-  if(!f.name.value.trim()||!f.contact.value.trim()){msg.textContent='Add your name and a phone number or email so we can reply.';msg.style.color='#e7d76b';return;}
-  var body=['Name: '+f.name.value,'Contact: '+f.contact.value,'Role: '+f.role.value,'Building type: '+f.type.value,'Units: '+f.units.value,'Stalls: '+f.stalls.value,'Owners asking for EV: '+f.requests.value,'Location: '+f.location.value,'','Notes: '+f.notes.value].join('\n');
+  var f=this.elements, msg=document.getElementById('msg');
+  if(!f['name'].value.trim()||!f['contact'].value.trim()){msg.textContent='Add your name and a phone number or email so we can reply.';msg.style.color='#e7d76b';return;}
+  var body=['Name: '+f['name'].value,'Contact: '+f['contact'].value,'Role: '+f['role'].value,'Building type: '+f['type'].value,'Units: '+f['units'].value,'Stalls: '+f['stalls'].value,'Owners asking for EV: '+f['requests'].value,'Location: '+f['location'].value,'','Notes: '+f['notes'].value].join('\n');
   window.location.href='mailto:info@protoselectrical.ca?subject='+encodeURIComponent('Building EV assessment request')+'&body='+encodeURIComponent(body);
   msg.textContent='Your email app should open with the details filled in. If it doesn\'t, email info@protoselectrical.ca.';msg.style.color='';
 });

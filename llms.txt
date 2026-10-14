@@ -1,26 +1,32 @@
 # Protos Electrical
 
-> Protos Electrical Inc. is a family-owned, Alberta-licensed electrical contractor serving Calgary and area. Master Electrician owned; in the trade since 2011. Residential and commercial work.
+> Protos Electrical Inc. is a family-owned, Alberta-licensed electrical contractor serving Calgary, Cochrane, Airdrie, Aldersyde, Okotoks and Canmore. Master Electrician owned; in the trade since 2011. Residential, multi-unit and commercial work.
+
+- Condo and apartment EV charging: https://protoselectrical.ca/condo-ev-charging
 
 ## Services
 - EV charger installation: home and garage Level 2 chargers, commercial and multi-unit (condo/apartment) charging, panel capacity assessments, permits and inspection
 - New electrical services and service upgrades: residential and commercial services, panel replacements, utility coordination
 - Commercial tenant improvements: office, retail and industrial fit-outs, lighting and power layouts, demising; works with general contractors and property managers
 - Hot tub and swim spa wiring: dedicated circuits, GFCI disconnects, underground or surface wiring
+- Load management: load calculations and load management systems, including EV energy management (EVEMS), so homes, condos and businesses can add EV chargers, hot tubs and other loads on their existing service and avoid or delay an upgrade
+- Lighting control and home automation: Lutron RadioRA and Caseta systems for homes and offices
 - Residential service: lighting, outlets, circuits, renovations, basements, troubleshooting
 - Commercial service: troubleshooting, repairs, lighting upgrades, equipment connections, code compliance
 
 ## How we work
-- Site assessment first, then a firm, upfront price given in person
+- Free site assessment first, then a firm, upfront price given in person
+- Warranty: 2 years on workmanship and 2 years on products we supply (client-supplied products are not covered by our product warranty)
 - Regular business hours: Monday to Friday, 7am to 4pm (no 24/7 emergency service)
 
 ## Credentials
 - Master Electrician; Alberta licensed electrical contractor
+- City of Calgary Qualified Trade
 - ECAA member; WCB covered; commercial liability insured
 - Lutron certified (RadioRA, Caseta)
 
 ## Service area
-- Calgary, Alberta and surrounding area
+- Calgary, Cochrane, Airdrie, Aldersyde, Okotoks and Canmore, Alberta
 
 ## Contact
 - Phone: 780-803-2868
