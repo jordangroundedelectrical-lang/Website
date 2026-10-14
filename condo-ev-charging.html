@@ -88,6 +88,9 @@ p{margin:0 0 1em;max-width:66ch}
 .footer-bottom-links a:hover{color:var(--h-muted)}
 .call-bar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:95;gap:.6rem;padding:.7rem 1rem calc(.7rem + env(safe-area-inset-bottom));background:rgba(5,5,5,.94);border-top:1px solid var(--h-line);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
 .call-bar .button{flex:1;min-height:48px;padding:0 1rem}
+.main-nav a[aria-current="page"]{color:var(--h-accent)}
+.mobile-nav a[aria-current="page"]{color:var(--h-text)}
+@media (max-width:1180px){.main-nav{display:none}.nav-toggle{display:flex}.nav-cta{margin-left:auto}}
 @media (max-width:1060px){.footer-top{grid-template-columns:1fr}}
 @media (max-width:900px){.footer-links-group{flex-direction:column;gap:2.2rem}}
 @media (max-width:760px){
@@ -229,6 +232,7 @@ input:focus,select:focus,textarea:focus{border-color:var(--green);outline:none}
     </a>
     <nav class="main-nav" aria-label="Primary navigation">
       <a href="/#services">Services</a>
+      <a href="/condo-ev-charging" aria-current="page">Condo EV</a>
       <a href="/#family">Family</a>
       <a href="/#process">Process</a>
       <a href="/#projects">Projects</a>
@@ -243,6 +247,7 @@ input:focus,select:focus,textarea:focus{border-color:var(--green);outline:none}
 
 <div class="mobile-nav" id="mobile-nav" aria-hidden="true" role="dialog" aria-label="Mobile navigation">
   <a href="/#services">Services</a>
+  <a href="/condo-ev-charging" aria-current="page">Condo EV</a>
   <a href="/#family">Family</a>
   <a href="/#process">Process</a>
   <a href="/#projects">Projects</a>
@@ -308,7 +313,7 @@ input:focus,select:focus,textarea:focus{border-color:var(--green);outline:none}
       <dt>Load calculation</dt><dd>Spare capacity in kW, from your panel schedules and utility demand history.</dd>
       <dt>EV energy management (EVEMS)</dt><dd>Lets several chargers share one circuit by managing when and how fast each one charges.</dd>
       <dt>EV-ready stalls</dt><dd>A junction box or receptacle at each stall, so owners can add their own charger later.</dd>
-      <dt>Service upgrade, if needed</dt><dd>Designed, permitted and coordinated with the utility. We've installed new services up to 1600 A.</dd>
+      <dt>Service upgrade, if needed</dt><dd>Sized from the load calculation and permitted. Larger services are designed with a professional engineer and coordinated with the utility. Our crew has hands-on experience installing services up to 1600 A.</dd>
     </dl>
   </div>
 </section>

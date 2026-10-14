@@ -464,6 +464,35 @@
         text-transform: uppercase;
       }
 
+      /* ── EV callout ──────────────────────────────────────── */
+      .ev-callout {
+        border-bottom: 1px solid var(--line);
+        background: linear-gradient(135deg, rgba(125,255,106,0.07), rgba(125,255,106,0.02) 55%, transparent);
+      }
+      .ev-callout-inner {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        padding: 3rem 0;
+        flex-wrap: wrap;
+      }
+      .ev-callout-icon {
+        width: 64px;
+        height: 64px;
+        display: grid;
+        place-items: center;
+        border-radius: var(--radius-sm);
+        background: var(--accent-soft);
+        border: 1px solid rgba(125,255,106,0.22);
+        font-size: 1.8rem;
+        flex-shrink: 0;
+      }
+      .ev-callout-text { flex: 1 1 380px; }
+      .ev-callout-text .eyebrow { margin-bottom: 0.6rem; }
+      .ev-callout-text h2 { font-size: clamp(1.7rem, 2.6vw, 2.4rem); margin-bottom: 0.6rem; }
+      .ev-callout-text p  { max-width: 620px; }
+      .ev-callout-actions { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+
       /* ── Section header ──────────────────────────────────── */
       .section-header { max-width: 700px; margin-bottom: 3.5rem; }
       .section-header h2 { margin-bottom: 0.9rem; }
@@ -805,6 +834,12 @@
       .reveal-d4 { transition-delay: 0.40s; }
 
       /* ── Responsive ─────────────────────────────────────── */
+      @media (max-width: 1180px) {
+        .main-nav   { display: none; }
+        .nav-toggle { display: flex; }
+        .nav-cta    { margin-left: auto; }
+      }
+
       @media (max-width: 1060px) {
         .gallery-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
         .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -867,6 +902,7 @@
 
         <nav class="main-nav" aria-label="Primary navigation">
           <a href="#services">Services</a>
+          <a href="/condo-ev-charging">Condo EV</a>
           <a href="#family">Family</a>
           <a href="#process">Process</a>
           <a href="#projects">Projects</a>
@@ -892,6 +928,7 @@
     <!-- Mobile Nav Overlay -->
     <div class="mobile-nav" id="mobile-nav" aria-hidden="true" role="dialog" aria-label="Mobile navigation">
       <a href="#services">Services</a>
+      <a href="/condo-ev-charging">Condo EV</a>
       <a href="#family">Family</a>
       <a href="#process">Process</a>
       <a href="#projects">Projects</a>
@@ -972,6 +1009,22 @@
           </div>
         </div>
       </div>
+
+      <!-- EV charging callout -->
+      <section class="ev-callout" aria-labelledby="ev-callout-title">
+        <div class="container ev-callout-inner">
+          <div class="ev-callout-icon" aria-hidden="true">🔌</div>
+          <div class="ev-callout-text">
+            <span class="eyebrow">EV charging</span>
+            <h2 id="ev-callout-title">EV chargers for homes, condos and apartments.</h2>
+            <p>Condo board or property manager? We check what your building can carry, then plan the parkade and install. Homeowner? We install Level 2 chargers sized to your panel.</p>
+          </div>
+          <div class="ev-callout-actions">
+            <a class="button button-primary" href="/condo-ev-charging">Condo &amp; apartment EV charging</a>
+            <a class="button button-secondary" href="#contact" data-job="EV charger">Home charger quote</a>
+          </div>
+        </div>
+      </section>
 
       <!-- Family Values -->
       <section id="family" class="section">
@@ -1319,6 +1372,13 @@
 
       // Quote form: no form backend, so open a pre-filled email
       const quoteForm = document.getElementById('quote-form');
+
+      // Links like "Home charger quote" pre-pick the job type in the form
+      document.querySelectorAll('a[data-job]').forEach(link => {
+        link.addEventListener('click', () => {
+          if (quoteForm) quoteForm.elements['job'].value = link.dataset.job;
+        });
+      });
 
       if (quoteForm) {
         quoteForm.addEventListener('submit', e => {
