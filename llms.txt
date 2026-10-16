@@ -1,8 +1,15 @@
 # Protos Electrical
 
-> Protos Electrical Inc. is a family-owned, Alberta-licensed electrical contractor serving Calgary, Cochrane, Airdrie, Aldersyde, Okotoks and Canmore. Master Electrician owned; in the trade since 2011. Residential, multi-unit and commercial work.
+> Protos Electrical Inc. is a family-owned, Alberta-licensed electrical contractor serving Calgary, Cochrane, Airdrie, Chestermere, Aldersyde, Okotoks and Canmore. Master Electrician owned; in the trade since 2011. Residential, multi-unit and commercial work.
 
+## Pages
+- Home EV charger installation: https://protoselectrical.ca/ev-charger-installation
 - Condo and apartment EV charging: https://protoselectrical.ca/condo-ev-charging
+- Load management: https://protoselectrical.ca/load-management
+- Service upgrades: https://protoselectrical.ca/service-upgrades
+- Hot tub wiring: https://protoselectrical.ca/hot-tub-wiring
+- Commercial tenant improvements: https://protoselectrical.ca/tenant-improvements
+- Lutron lighting control: https://protoselectrical.ca/lighting-control
 
 ## Services
 - EV charger installation: home and garage Level 2 chargers, commercial and multi-unit (condo/apartment) charging, panel capacity assessments, permits and inspection
@@ -15,7 +22,7 @@
 - Commercial service: troubleshooting, repairs, lighting upgrades, equipment connections, code compliance
 
 ## How we work
-- Free site assessment first, then a firm, upfront price given in person
+- Site visit first; a firm, upfront price is given in person after we've seen the job (no prices or price ranges online or over the phone)
 - Warranty: 2 years on workmanship and 2 years on products we supply (client-supplied products are not covered by our product warranty)
 - Regular business hours: Monday to Friday, 7am to 4pm (no 24/7 emergency service)
 
@@ -26,7 +33,7 @@
 - Lutron certified (RadioRA, Caseta)
 
 ## Service area
-- Calgary, Cochrane, Airdrie, Aldersyde, Okotoks and Canmore, Alberta
+- Calgary, Cochrane, Airdrie, Chestermere, Aldersyde, Okotoks and Canmore, Alberta
 
 ## Contact
 - Phone: 780-803-2868

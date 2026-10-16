@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calgary Electrician &amp; EV Charger Installs | Protos Electrical</title>
-    <meta name="description" content="Family-owned Calgary electrician: EV chargers, service upgrades, hot tubs and tenant improvements. Free on-site quotes. Call 780-803-2868." />
+    <meta name="description" content="Family-owned Calgary electrician: EV chargers, service upgrades, hot tubs and tenant improvements. Site visit first, then a firm price. Call 780-803-2868." />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#050505" />
     <link rel="canonical" href="https://protoselectrical.ca/" />
@@ -17,16 +17,19 @@
     <meta property="og:site_name" content="Protos Electrical" />
     <meta property="og:locale" content="en_CA" />
     <meta property="og:title" content="Protos Electrical | Calgary Electrician" />
-    <meta property="og:description" content="EV chargers, service upgrades, hot tubs and tenant improvements across Calgary and area. Free on-site quotes. Call 780-803-2868." />
-    <meta property="og:image" content="https://protoselectrical.ca/assets/og/og-home.jpg" />
-    <meta property="og:image:width" content="1000" />
-    <meta property="og:image:height" content="525" />
+    <meta property="og:description" content="EV chargers, service upgrades, hot tubs and tenant improvements across Calgary and area. Site visit first, then a firm price. Call 780-803-2868." />
+    <meta property="og:image" content="https://protoselectrical.ca/assets/share-logo.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content="Protos Electrical logo" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Protos Electrical | Calgary Electrician" />
-    <meta name="twitter:description" content="EV chargers, service upgrades, hot tubs and tenant improvements across Calgary and area. Free on-site quotes." />
-    <meta name="twitter:image" content="https://protoselectrical.ca/assets/og/og-home.jpg" />
+    <meta name="twitter:description" content="EV chargers, service upgrades, hot tubs and tenant improvements across Calgary and area. Book a site visit." />
+    <meta name="twitter:image" content="https://protoselectrical.ca/assets/share-logo.png" />
+    <meta name="twitter:image:alt" content="Protos Electrical logo" />
 
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -43,10 +46,10 @@
       "legalName": "Protos Electrical Inc.",
       "url": "https://protoselectrical.ca/",
       "logo": "https://protoselectrical.ca/assets/protos-logo.png",
-      "image": "https://protoselectrical.ca/assets/projects/meter-stack-condo.jpg",
+      "image": "https://protoselectrical.ca/assets/share-logo.png",
       "telephone": "+1-780-803-2868",
       "email": "info@protoselectrical.ca",
-      "description": "Family-owned, Master Electrician-owned electrical contractor serving Calgary, Cochrane, Airdrie, Aldersyde, Okotoks and Canmore: EV chargers, new services and service upgrades, commercial tenant improvements, hot tub wiring, Lutron lighting control, and residential and commercial service. Free on-site quotes; 2-year workmanship warranty.",
+      "description": "Family-owned, Master Electrician-owned electrical contractor serving Calgary, Cochrane, Airdrie, Chestermere, Aldersyde, Okotoks and Canmore: EV chargers, new services and service upgrades, commercial tenant improvements, hot tub wiring, Lutron lighting control, and residential and commercial service. Site visit first, with pricing given in person; 2-year workmanship warranty.",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Calgary",
@@ -57,6 +60,7 @@
         { "@type": "City", "name": "Calgary" },
         { "@type": "City", "name": "Cochrane" },
         { "@type": "City", "name": "Airdrie" },
+        { "@type": "City", "name": "Chestermere" },
         { "@type": "Place", "name": "Aldersyde" },
         { "@type": "City", "name": "Okotoks" },
         { "@type": "City", "name": "Canmore" }
@@ -93,8 +97,7 @@
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Residential electrical service" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial electrical service" } }
         ]
-      },
-      "priceRange": "$$"
+      }
     }
     </script>
 
@@ -231,7 +234,7 @@
       .site-header {
         position: sticky;
         top: 0;
-        z-index: 90;
+        z-index: 120;
         background: rgba(5,5,5,0.88);
         border-bottom: 1px solid var(--line);
         backdrop-filter: blur(18px);
@@ -653,6 +656,46 @@
         color: var(--accent);
       }
 
+      /* ── Reviews ─────────────────────────────────────────── */
+      .rating-stars { color: var(--accent); letter-spacing: 0.12em; }
+      .rating-line {
+        display: flex;
+        width: fit-content;
+        align-items: center;
+        gap: 0.7rem;
+        margin: -1.6rem 0 2.4rem;
+        font-size: 0.88rem;
+        color: var(--muted);
+      }
+      .rating-line strong { color: var(--text); font-weight: 700; }
+      .rating-line:hover strong { color: var(--accent); }
+      .reviews-section { background: var(--bg-2); border-top: 1px solid var(--line); }
+      .reviews-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0,1fr));
+        gap: 1.2rem;
+      }
+      .review-card {
+        background: linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0.01));
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 2rem 1.8rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.1rem;
+      }
+      .review-card blockquote { flex: 1; font-size: 1rem; line-height: 1.7; color: var(--text); }
+      .review-card figcaption { display: flex; flex-direction: column; gap: 0.15rem; font-size: 0.85rem; }
+      .review-card figcaption strong { color: var(--text); }
+      .review-card figcaption span { color: var(--muted-2); font-size: 0.78rem; }
+      .reviews-actions { margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+      .review-card { position: relative; transition: border-color 0.2s; }
+      .review-card:hover { border-color: var(--accent); }
+      .review-link { align-self: flex-start; margin-top: 0.4rem; font-size: 0.78rem; font-weight: 600; color: var(--accent); }
+      .review-link::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+      .review-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+      .text-link { color: var(--accent); text-decoration: underline; }
+
       /* ── Contact ─────────────────────────────────────────── */
       .contact-band {
         background: linear-gradient(135deg, #0b0b0b, #111111 52%, #141414);
@@ -710,6 +753,21 @@
       .contact-form textarea:focus { outline: none; border-color: var(--accent); }
       .contact-form .button { align-self: flex-start; }
       .form-msg { font-size: 0.8rem; color: var(--muted-2); }
+      .form-note { font-size: 0.8rem; line-height: 1.55; color: var(--muted); margin: 0; }
+      .form-msg.ok { color: var(--accent); }
+      .form-msg.warn { color: #e7d76b; }
+      .contact-form .button[disabled] { opacity: 0.6; cursor: wait; }
+      .hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+      .card-link {
+        display: inline-block;
+        margin-top: 1.3rem;
+        font-size: 0.74rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+      .card-link:hover span { margin-left: 0.2rem; }
       .review-button span { color: var(--accent); font-size: 0.95rem; letter-spacing: 0; }
       .certifications { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.5rem; }
       .cert-badge {
@@ -819,7 +877,8 @@
       @media (max-width: 900px) {
         .hero-grid,
         .services-grid,
-        .process-grid { grid-template-columns: 1fr; }
+        .process-grid,
+        .reviews-grid { grid-template-columns: 1fr; }
         .trust-grid         { grid-template-columns: repeat(2, minmax(0,1fr)); }
         .trust-item:last-child { grid-column: 1 / -1; }
         .stats              { gap: 2rem; }
@@ -919,8 +978,12 @@
             </p>
             <div class="hero-actions">
               <a class="button button-primary" href="tel:+17808032868">Call 780-803-2868</a>
-              <a class="button button-secondary" href="#contact">Get a free quote</a>
+              <a class="button button-secondary" href="#contact">Book a site visit</a>
             </div>
+            <a class="rating-line" href="https://www.google.com/maps?cid=18434212954916186301" target="_blank" rel="noopener">
+              <span class="rating-stars" aria-hidden="true">★★★★★</span>
+              <span><strong>5.0 on Google</strong> · 5 reviews · <u>Read them</u></span>
+            </a>
             <div class="stats" aria-label="Business highlights">
               <div class="stat">
                 <strong>2011</strong>
@@ -957,8 +1020,8 @@
       <div class="trust-strip">
         <div class="container trust-grid">
           <div class="trust-item">
-            <strong>Free On-Site Quotes</strong>
-            <span>Firm &amp; upfront</span>
+            <strong>Site Visit First</strong>
+            <span>Pricing given in person</span>
           </div>
           <div class="trust-item">
             <strong>Licensed &amp; Insured</strong>
@@ -990,7 +1053,7 @@
           </div>
           <div class="ev-callout-actions">
             <a class="button button-primary" href="/condo-ev-charging">Condo &amp; apartment EV charging</a>
-            <a class="button button-secondary" href="#contact" data-job="EV charger">Home charger quote</a>
+            <a class="button button-secondary" href="#contact" data-job="EV charger">Book a home charger visit</a>
           </div>
         </div>
       </section>
@@ -1043,6 +1106,7 @@
                 <li>Panel capacity assessment</li>
                 <li>Permits &amp; inspection</li>
               </ul>
+              <a class="card-link" href="/ev-charger-installation">Learn more <span aria-hidden="true">→</span></a>
             </article>
             <article class="service-card reveal reveal-d1">
               <div class="icon-wrap">⚡</div>
@@ -1054,6 +1118,7 @@
                 <li>Panel replacements</li>
                 <li>Utility coordination</li>
               </ul>
+              <a class="card-link" href="/service-upgrades">Learn more <span aria-hidden="true">→</span></a>
             </article>
             <article class="service-card reveal reveal-d2">
               <div class="icon-wrap">🏢</div>
@@ -1065,6 +1130,7 @@
                 <li>Demising &amp; renovations</li>
                 <li>Working with GCs &amp; property managers</li>
               </ul>
+              <a class="card-link" href="/tenant-improvements">Learn more <span aria-hidden="true">→</span></a>
             </article>
             <article class="service-card reveal">
               <div class="icon-wrap">♨️</div>
@@ -1076,6 +1142,7 @@
                 <li>Panel capacity check</li>
                 <li>Permits &amp; inspection</li>
               </ul>
+              <a class="card-link" href="/hot-tub-wiring">Learn more <span aria-hidden="true">→</span></a>
             </article>
             <article class="service-card reveal reveal-d1">
               <div class="icon-wrap">🏠</div>
@@ -1109,6 +1176,7 @@
                 <li>Avoid or delay service upgrades</li>
                 <li>Homes, condos &amp; commercial</li>
               </ul>
+              <a class="card-link" href="/load-management">Learn more <span aria-hidden="true">→</span></a>
             </article>
             <article class="service-card reveal reveal-d1">
               <div class="icon-wrap">💡</div>
@@ -1120,6 +1188,7 @@
                 <li>Wireless retrofit options</li>
                 <li>Homes &amp; offices</li>
               </ul>
+              <a class="card-link" href="/lighting-control">Learn more <span aria-hidden="true">→</span></a>
             </article>
           </div>
         </div>
@@ -1142,7 +1211,7 @@
             <div class="process-card reveal reveal-d1">
               <div class="process-step">2</div>
               <h3>Site assessment</h3>
-              <p>We visit the site, assess the work, and give you a firm, upfront price in person — no hidden costs or surprises. Site visits and quotes are free.</p>
+              <p>We visit the site, assess the work, and give you a firm, upfront price in person — no hidden costs or surprises. We don't give prices before we've seen the job.</p>
             </div>
             <div class="process-card reveal reveal-d2">
               <div class="process-step">3</div>
@@ -1214,14 +1283,46 @@
         </div>
       </section>
 
+      <!-- Reviews (real Google reviews, quoted as written) -->
+      <section id="reviews" class="section reviews-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Google reviews</span>
+            <h2>5.0 stars from every review so far.</h2>
+            <p>What customers have said on Google about working with Jordan and the crew. <a class="text-link" href="https://www.google.com/maps?cid=18434212954916186301" target="_blank" rel="noopener">5.0 · 5 reviews on Google</a></p>
+          </div>
+          <div class="reviews-grid">
+            <figure class="review-card">
+              <div class="rating-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+              <blockquote>Amazing work with my Tesla charger install. So clean and professional.</blockquote>
+              <figcaption><strong>Quan L.</strong><span>EV charger install</span><a class="review-link" href="https://www.google.com/maps?cid=18434212954916186301" target="_blank" rel="noopener" aria-label="Read on Google: Quan L.&#39;s review (opens in new tab)">Read on Google</a></figcaption>
+            </figure>
+            <figure class="review-card">
+              <div class="rating-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+              <blockquote>Great and efficient work installing our hot tub electrical, doing the electrical inspection of our house before purchase…</blockquote>
+              <figcaption><strong>Maxime C.</strong><span>Hot tub &amp; pre-purchase inspection</span><a class="review-link" href="https://www.google.com/maps?cid=18434212954916186301" target="_blank" rel="noopener" aria-label="Read on Google: Maxime C.&#39;s review (opens in new tab)">Read on Google</a></figcaption>
+            </figure>
+            <figure class="review-card">
+              <div class="rating-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+              <blockquote>Had a great experience with these guys, they went above and beyond to make my idea a reality! Very professional and reliable!</blockquote>
+              <figcaption><strong>Lyndon S.</strong><span>Google review</span><a class="review-link" href="https://www.google.com/maps?cid=18434212954916186301" target="_blank" rel="noopener" aria-label="Read on Google: Lyndon S.&#39;s review (opens in new tab)">Read on Google</a></figcaption>
+            </figure>
+          </div>
+          <div class="reviews-actions">
+            <a class="button button-primary" href="https://www.google.com/maps?cid=18434212954916186301" target="_blank" rel="noopener">Read all reviews on Google</a>
+            <a class="button button-secondary review-button" href="https://g.page/r/Cb3orosDe9P_EBM/review" target="_blank" rel="noopener"><span aria-hidden="true">★</span> Leave us a review</a>
+          </div>
+        </div>
+      </section>
+
       <!-- Contact -->
       <div id="contact" class="contact-band">
         <div class="container contact-inner">
           <div>
             <span class="eyebrow">Get in touch</span>
-            <h2>Tell us what the job needs.</h2>
+            <h2>Request a site visit.</h2>
             <p>Whether it's a quick repair or a full commercial build, we're ready to help.</p>
-            <p class="hours-line"><strong>Mon–Fri, 7am–4pm</strong> · Serving Calgary, Cochrane, Airdrie, Aldersyde, Okotoks &amp; Canmore</p>
+            <p class="hours-line"><strong>Mon–Fri, 7am–4pm</strong> · Serving Calgary, Cochrane, Airdrie, Chestermere, Aldersyde, Okotoks &amp; Canmore</p>
             <div class="certifications">
               <span class="cert-badge">Master Electrician</span>
               <span class="cert-badge">Alberta Licensed</span>
@@ -1233,7 +1334,7 @@
             </div>
           </div>
           <div class="contact-side">
-          <form class="contact-form" id="quote-form" novalidate>
+          <form class="contact-form lead-form" id="quote-form" data-subject="Site visit request" novalidate>
             <div class="form-row">
               <label>Your name<input name="name" required autocomplete="name" /></label>
               <label>Phone or email<input name="contact" required /></label>
@@ -1260,10 +1361,12 @@
               </label>
             </div>
             <label>Panel photo note <span class="optional">(optional)</span>
-              <textarea name="panel" rows="3" placeholder="Panel brand, main breaker size, or attach a panel photo to the email before you send it"></textarea>
+              <textarea name="panel" rows="3" placeholder="Panel brand and main breaker size. You can text or email us a panel photo after sending this."></textarea>
             </label>
-            <button class="button button-primary" type="submit">Send job details</button>
-            <p class="form-msg" id="quote-msg" role="status">This opens your email app with the details filled in.</p>
+            <label class="hp-field" aria-hidden="true">Leave this empty<input name="_gotcha" tabindex="-1" autocomplete="off" /></label>
+            <p class="form-note">Pricing is given in person after we've seen the job.<br />We only use your details to reply to you.</p>
+            <button class="button button-primary" type="submit">Request a site visit</button>
+            <p class="form-msg" id="quote-msg" role="status">We reply within one business day.</p>
           </form>
           <div class="contact-actions">
             <a class="button button-primary" href="tel:+17808032868">Call 780-803-2868</a>
@@ -1287,20 +1390,20 @@
               alt="Protos Electrical"
               style="width: min(180px, 42vw);"
             />
-            <p>Family-owned electrical contractor serving Calgary, Cochrane, Airdrie, Aldersyde, Okotoks and Canmore.</p>
+            <p>Family-owned electrical contractor serving Calgary, Cochrane, Airdrie, Chestermere, Aldersyde, Okotoks and Canmore.</p>
             <p><a href="tel:+17808032868">780-803-2868</a><br />Mon–Fri, 7am–4pm</p>
           </div>
           <div class="footer-links-group">
             <div class="footer-col">
               <h4>Services</h4>
               <ul>
-                <li><a href="#services">EV Chargers</a></li>
+                <li><a href="/ev-charger-installation">EV Chargers</a></li>
                 <li><a href="/condo-ev-charging">Condo &amp; multi-unit EV charging</a></li>
-                <li><a href="#services">New Services</a></li>
-                <li><a href="#services">Tenant Improvements</a></li>
-                <li><a href="#services">Hot Tubs</a></li>
-                <li><a href="#services">Load Management</a></li>
-                <li><a href="#services">Lighting Control</a></li>
+                <li><a href="/service-upgrades">Service Upgrades</a></li>
+                <li><a href="/tenant-improvements">Tenant Improvements</a></li>
+                <li><a href="/hot-tub-wiring">Hot Tubs</a></li>
+                <li><a href="/load-management">Load Management</a></li>
+                <li><a href="/lighting-control">Lighting Control</a></li>
                 <li><a href="#services">Residential &amp; Commercial Service</a></li>
               </ul>
             </div>
@@ -1330,77 +1433,8 @@
       <a class="button button-secondary" href="mailto:info@protoselectrical.ca?subject=Site%20Visit%20Request">Email</a>
     </div>
 
+    <script src="assets/site.js" defer></script>
     <script>
-      // Hamburger menu
-      const navToggle = document.getElementById('nav-toggle');
-      const mobileNav = document.getElementById('mobile-nav');
-
-      if (navToggle && mobileNav) {
-        function openNav() {
-          navToggle.classList.add('open');
-          mobileNav.classList.add('open');
-          mobileNav.setAttribute('aria-hidden', 'false');
-          navToggle.setAttribute('aria-expanded', 'true');
-          navToggle.setAttribute('aria-label', 'Close navigation');
-          document.body.style.overflow = 'hidden';
-        }
-
-        function closeNav() {
-          navToggle.classList.remove('open');
-          mobileNav.classList.remove('open');
-          mobileNav.setAttribute('aria-hidden', 'true');
-          navToggle.setAttribute('aria-expanded', 'false');
-          navToggle.setAttribute('aria-label', 'Open navigation');
-          document.body.style.overflow = '';
-        }
-
-        navToggle.addEventListener('click', () => {
-          navToggle.classList.contains('open') ? closeNav() : openNav();
-        });
-
-        mobileNav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeNav));
-
-        document.addEventListener('keydown', e => {
-          if (e.key === 'Escape' && mobileNav.classList.contains('open')) closeNav();
-        });
-      }
-
-      // Quote form: no form backend, so open a pre-filled email
-      const quoteForm = document.getElementById('quote-form');
-
-      // Links like "Home charger quote" pre-pick the job type in the form
-      document.querySelectorAll('a[data-job]').forEach(link => {
-        link.addEventListener('click', () => {
-          if (quoteForm) quoteForm.elements['job'].value = link.dataset.job;
-        });
-      });
-
-      if (quoteForm) {
-        quoteForm.addEventListener('submit', e => {
-          e.preventDefault();
-          const f = quoteForm.elements;
-          const msg = document.getElementById('quote-msg');
-          if (!f['name'].value.trim() || !f['contact'].value.trim()) {
-            msg.textContent = 'Add your name and a phone number or email so we can reply.';
-            msg.style.color = '#e7d76b';
-            return;
-          }
-          const body = [
-            'Name: ' + f['name'].value,
-            'Contact: ' + f['contact'].value,
-            'Job type: ' + f['job'].value,
-            'Timeline: ' + f['timeline'].value,
-            '',
-            'Panel photo note: ' + f['panel'].value
-          ].join('\n');
-          window.location.href = 'mailto:info@protoselectrical.ca?subject=' +
-            encodeURIComponent('Quote request: ' + f['job'].value) +
-            '&body=' + encodeURIComponent(body);
-          msg.textContent = "Your email app should open with the details filled in. If it doesn't, email info@protoselectrical.ca.";
-          msg.style.color = '';
-        });
-      }
-
       // Scroll reveal
       const revealItems = document.querySelectorAll('.reveal');
 
