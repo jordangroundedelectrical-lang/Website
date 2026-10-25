@@ -70,8 +70,13 @@ p  { color: var(--muted); line-height: 1.72; }
 
 /* Header */
 .site-header { position: sticky; top: 0; z-index: 120; background: rgba(5,5,5,0.88); border-bottom: 1px solid var(--line); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
-.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; min-height: 80px; }
-.brand { display: inline-flex; align-items: center; flex-shrink: 0; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; min-height: 64px; transition: min-height 0.25s ease; }
+.brand { display: inline-flex; align-items: center; gap: 0.7rem; min-height: 44px; flex-shrink: 1; min-width: 0; }
+.brand-icon { width: 44px; height: 44px; flex-shrink: 0; filter: drop-shadow(0 0 14px rgba(125,255,106,0.14)); transition: width 0.25s ease, height 0.25s ease; }
+.brand-name { font-size: 1.05rem; font-weight: 800; letter-spacing: 0.1em; line-height: 1; text-transform: uppercase; white-space: nowrap; color: var(--text); }
+.brand-name span { color: var(--accent); }
+.site-header.is-compact .header-inner { min-height: 52px; }
+.site-header.is-compact .brand-icon { width: 34px; height: 34px; }
 .brand-mark { width: min(240px, 50vw); height: auto; filter: drop-shadow(0 0 22px rgba(125,255,106,0.14)); }
 .main-nav { display: flex; align-items: center; gap: 2.2rem; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; color: var(--muted); }
 .main-nav a { transition: color var(--transition); }
@@ -79,12 +84,12 @@ p  { color: var(--muted); line-height: 1.72; }
 .main-nav a[aria-current="page"] { color: var(--accent); }
 .nav-cta { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 1.5rem; border-radius: 999px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; background: linear-gradient(135deg, var(--accent), var(--accent-strong)); color: #040404; flex-shrink: 0; transition: transform var(--transition), box-shadow var(--transition); }
 .nav-cta:hover, .nav-cta:focus-visible { transform: translateY(-1px); box-shadow: 0 8px 28px rgba(125,255,106,0.22); }
-.nav-toggle { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 42px; height: 42px; background: transparent; border: 1px solid var(--line); border-radius: var(--radius-sm); cursor: pointer; padding: 0 10px; flex-shrink: 0; z-index: 110; position: relative; }
+.nav-toggle { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 44px; height: 44px; background: transparent; border: 1px solid var(--line); border-radius: var(--radius-sm); cursor: pointer; padding: 0 10px; flex-shrink: 0; z-index: 110; position: relative; }
 .nav-toggle span { display: block; height: 1.5px; background: var(--text); border-radius: 2px; transition: transform 0.3s ease, opacity 0.3s ease; }
 .nav-toggle.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
 .nav-toggle.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
 .nav-toggle.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
-.mobile-nav { position: fixed; inset: 0; z-index: 100; background: rgba(3,3,3,0.97); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2.2rem; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.3s ease, visibility 0s linear 0.3s; }
+.mobile-nav { position: fixed; inset: 0; box-sizing: border-box; overflow-y: auto; z-index: 100; background: rgba(3,3,3,0.97); display: flex; flex-direction: column; align-items: center; justify-content: safe center; gap: 2.2rem; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.3s ease, visibility 0s linear 0.3s; }
 .mobile-nav.open { opacity: 1; visibility: visible; pointer-events: all; transition: opacity 0.3s ease; }
 .mobile-nav a { font-size: 2rem; font-weight: 700; letter-spacing: -0.03em; color: var(--muted); transition: color var(--transition); }
 .mobile-nav a:hover { color: var(--text); }
@@ -213,6 +218,11 @@ p  { color: var(--muted); line-height: 1.72; }
 }
 @media (max-width: 760px) {
   .nav-cta { display: none; }
+  .header-inner { min-height: 56px; gap: 1rem; }
+  .brand-icon { width: 36px; height: 36px; }
+  .brand-name { font-size: 0.9rem; letter-spacing: 0.08em; }
+  .site-header.is-compact .header-inner { min-height: 48px; }
+  .site-header.is-compact .brand-icon { width: 30px; height: 30px; }
   .section { padding: 4rem 0; }
   .svc-hero { padding: 1.5rem 0 3.5rem; }
   .checklist, .form-row { grid-template-columns: 1fr; }
@@ -226,7 +236,13 @@ p  { color: var(--muted); line-height: 1.72; }
   .footer-bottom { flex-direction: column; align-items: flex-start; }
   .contact-form { padding: 1.3rem 1.1rem; }
 }
+@media (max-width: 330px) {
+  .header-inner { gap: 0.6rem; }
+  .brand { gap: 0.5rem; }
+  .brand-icon { width: 32px; height: 32px; }
+  .brand-name { font-size: 0.78rem; letter-spacing: 0.03em; }
+}
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .button, .nav-cta, .nav-toggle span, .mobile-nav { transition: none; }
+  .button, .nav-cta, .nav-toggle span, .mobile-nav, .header-inner, .brand-icon { transition: none; }
 }

@@ -16,12 +16,28 @@ var PROTOS_FORM_ENDPOINT = 'https://formspree.io/f/xaeqpvnz';
       toggle.setAttribute('aria-expanded', String(open));
       toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
       document.body.style.overflow = open ? 'hidden' : '';
+      // Keep the menu links clear of the sticky header (which sits below the top bar at the top of the page)
+      var hdr = document.querySelector('.site-header');
+      if (open && hdr) nav.style.paddingTop = Math.max(0, hdr.getBoundingClientRect().bottom) + 'px';
     };
     toggle.addEventListener('click', function () { setOpen(!toggle.classList.contains('open')); });
     nav.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && nav.classList.contains('open')) setOpen(false);
     });
+  }
+
+  // Compact header once the page is scrolled a little
+  var header = document.querySelector('.site-header');
+  if (header) {
+    var update = function () {
+      var y = window.scrollY || document.documentElement.scrollTop;
+      // Hysteresis (40 down / 10 up) stops flicker when the height change shifts the page
+      if (y > 40) header.classList.add('is-compact');
+      else if (y < 10) header.classList.remove('is-compact');
+    };
+    window.addEventListener('scroll', update, { passive: true });
+    update();
   }
 
   // Links like "Book a home charger visit" pre-pick the job type in the form on the same page

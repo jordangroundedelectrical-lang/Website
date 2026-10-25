@@ -65,20 +65,25 @@ p{margin:0 0 1em;max-width:66ch}
 .topbar a{transition:color var(--h-ease)}
 .topbar a:hover{color:var(--h-text)}
 .site-header{position:sticky;top:0;z-index:120;background:rgba(5,5,5,.88);border-bottom:1px solid var(--h-line);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
-.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;min-height:80px}
-.brand{display:inline-flex;align-items:center;flex-shrink:0}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;min-height:64px;transition:min-height .25s ease}
+.brand{display:inline-flex;align-items:center;gap:.7rem;min-height:44px;flex-shrink:1;min-width:0}
+.brand-icon{width:44px;height:44px;flex-shrink:0;filter:drop-shadow(0 0 14px rgba(125,255,106,.14));transition:width .25s ease,height .25s ease}
+.brand-name{font-size:1.05rem;font-weight:800;letter-spacing:.1em;line-height:1;text-transform:uppercase;white-space:nowrap;color:var(--h-text)}
+.brand-name span{color:var(--h-accent)}
+.site-header.is-compact .header-inner{min-height:52px}
+.site-header.is-compact .brand-icon{width:34px;height:34px}
 .brand-mark{width:min(240px,50vw);height:auto;filter:drop-shadow(0 0 22px rgba(125,255,106,.14))}
 .main-nav{display:flex;align-items:center;gap:2.2rem;font-size:.72rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--h-muted)}
 .main-nav a{transition:color var(--h-ease)}
 .main-nav a:hover,.main-nav a:focus-visible{color:var(--h-text)}
 .nav-cta{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 1.5rem;border-radius:999px;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:linear-gradient(135deg,var(--h-accent),var(--h-accent-strong));color:#040404 !important;flex-shrink:0;transition:transform var(--h-ease),box-shadow var(--h-ease)}
 .nav-cta:hover,.nav-cta:focus-visible{transform:translateY(-1px);box-shadow:0 8px 28px rgba(125,255,106,.22)}
-.nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:42px;height:42px;background:transparent;border:1px solid var(--h-line);border-radius:12px;cursor:pointer;padding:0 10px;flex-shrink:0;z-index:110;position:relative}
+.nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;background:transparent;border:1px solid var(--h-line);border-radius:12px;cursor:pointer;padding:0 10px;flex-shrink:0;z-index:110;position:relative}
 .nav-toggle span{display:block;height:1.5px;background:var(--h-text);border-radius:2px;transition:transform .3s ease,opacity .3s ease}
 .nav-toggle.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
 .nav-toggle.open span:nth-child(2){opacity:0;transform:scaleX(0)}
 .nav-toggle.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
-.mobile-nav{position:fixed;inset:0;z-index:100;background:rgba(3,3,3,.97);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.2rem;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .3s ease,visibility 0s linear .3s}
+.mobile-nav{position:fixed;inset:0;box-sizing:border-box;overflow-y:auto;z-index:100;background:rgba(3,3,3,.97);display:flex;flex-direction:column;align-items:center;justify-content:safe center;gap:2.2rem;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .3s ease,visibility 0s linear .3s}
 .mobile-nav.open{opacity:1;visibility:visible;pointer-events:all;transition:opacity .3s ease}
 .mobile-nav a{font-size:2rem;font-weight:700;letter-spacing:-.03em;color:var(--h-muted);transition:color var(--h-ease)}
 .mobile-nav a:hover{color:var(--h-text)}
@@ -109,11 +114,18 @@ p{margin:0 0 1em;max-width:66ch}
 @media (max-width:900px){.footer-links-group{flex-direction:column;gap:2.2rem}}
 @media (max-width:760px){
   .main-nav,.nav-cta{display:none}
+  .header-inner{min-height:56px;gap:1rem}
+  .brand-icon{width:36px;height:36px}
+  .brand-name{font-size:.9rem;letter-spacing:.08em}
+  .site-header.is-compact .header-inner{min-height:48px}
+  .site-header.is-compact .brand-icon{width:30px;height:30px}
   .nav-toggle{display:flex}
   .footer-top{padding:2.8rem 0 2.2rem}
   .call-bar{display:flex}
   body{padding-bottom:76px}
 }
+@media (max-width:330px){.header-inner{gap:.6rem}.brand{gap:.5rem}.brand-icon{width:32px;height:32px}.brand-name{font-size:.78rem;letter-spacing:.03em}}
+@media (prefers-reduced-motion:reduce){.header-inner,.brand-icon{transition:none}}
 @media (max-width:480px){.footer-bottom{flex-direction:column;align-items:flex-start}}
 
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 1.85rem;border-radius:999px;font:700 .76rem/1.2 var(--body);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
@@ -249,7 +261,7 @@ form .btn[disabled]{opacity:.6;cursor:wait}
 <header class="site-header">
   <div class="container header-inner">
     <a href="/" class="brand" aria-label="Protos Electrical — home">
-      <img class="brand-mark" src="/assets/protos-logo.png" alt="Protos Electrical">
+      <img class="brand-icon" src="/assets/protos-mark.png" alt="" width="128" height="128"><span class="brand-name">Protos <span>Electrical</span></span>
     </a>
     <nav class="main-nav" aria-label="Primary navigation">
       <a href="/#services">Services</a>
