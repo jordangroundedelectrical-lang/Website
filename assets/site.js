@@ -32,8 +32,46 @@ var PROTOS_FORM_ENDPOINT = 'https://formspree.io/f/xaeqpvnz';
     });
   });
 
+  // Ad tracking: remember utm_* values and the landing page for this visit (first touch wins).
+  // Only short, plain values are kept; nothing personal is ever read or stored.
+  var UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content'];
+  var SAFE_VALUE = /^[\w.\-]{1,60}$/;
+  var SAFE_PATH = /^\/[\w.\-\/]{0,100}$/;
+  var store = function (key, value) { try { sessionStorage.setItem('protos_' + key, value); } catch (e) {} };
+  var recall = function (key) { try { return sessionStorage.getItem('protos_' + key) || ''; } catch (e) { return ''; } };
+  (function () {
+    var params;
+    try { params = new URLSearchParams(location.search); } catch (e) { return; }
+    var found = {}, any = false;
+    UTM_KEYS.forEach(function (k) {
+      var v = params.get(k);
+      if (v && SAFE_VALUE.test(v)) { found[k] = v; any = true; }
+    });
+    if (any && !recall('utm_set')) {
+      UTM_KEYS.forEach(function (k) { if (found[k]) store(k, found[k]); });
+      store('utm_set', '1');
+    }
+    if (!recall('landing_page') && SAFE_PATH.test(location.pathname)) store('landing_page', location.pathname);
+  })();
+
   // Site visit request forms: any <form class="lead-form" data-subject="...">
   document.querySelectorAll('form.lead-form').forEach(function (form) {
+    // Hidden ad-tracking fields, refilled from sessionStorage at load and again on submit
+    var trackFields = UTM_KEYS.concat(['landing_page']).map(function (k) {
+      var input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = k;
+      form.appendChild(input);
+      return input;
+    });
+    var fillTracking = function () {
+      trackFields.forEach(function (input) {
+        var v = recall(input.name);
+        input.value = (input.name === 'landing_page' ? SAFE_PATH : SAFE_VALUE).test(v) ? v : '';
+      });
+    };
+    fillTracking();
+
     var msg = form.querySelector('.form-msg');
     var button = form.querySelector('button[type="submit"]');
     var say = function (text, kind) {
@@ -73,6 +111,13 @@ var PROTOS_FORM_ENDPOINT = 'https://formspree.io/f/xaeqpvnz';
         say('Add your name and a phone number or email so we can reply.', 'warn');
         return;
       }
+      var heard = form.elements['heard_about'];
+      if (heard && !heard.value) {
+        say('Please tell us how you heard about us.', 'warn');
+        heard.focus();
+        return;
+      }
+      fillTracking();
       if (!PROTOS_FORM_ENDPOINT) { openEmail(); return; }
       if (form.elements['_gotcha'] && form.elements['_gotcha'].value) { form.reset(); say('Thanks.', 'ok'); return; }
 
