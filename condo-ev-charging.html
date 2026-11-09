@@ -231,14 +231,49 @@ form .btn[disabled]{opacity:.6;cursor:wait}
 </script>
 <script type="application/ld+json">
 {
- "@context":"https://schema.org",
- "@type":"FAQPage",
- "mainEntity":[
-  {"@type":"Question","name":"Does our building need a new electrical service before we add EV charging?","acceptedAnswer":{"@type":"Answer","text":"Often not. A load calculation shows how much spare capacity the building has. An EV energy management system lets several chargers share that capacity, which can delay or shrink a service upgrade."}},
-  {"@type":"Question","name":"Can one owner install a charger in their own stall?","acceptedAnswer":{"@type":"Answer","text":"In most condos the parkade electrical is common property, so the board has to approve it first. A building-wide plan usually costs less per stall than approving one-off installs."}},
-  {"@type":"Question","name":"Who pays for the electricity a charger uses?","acceptedAnswer":{"@type":"Answer","text":"That is a board decision. Networked chargers can track each user's energy so it can be billed back; simpler setups use a flat fee. We explain the options and their costs so the board can choose."}},
-  {"@type":"Question","name":"Do you write the EV Charging Road Map for ChargeYYC?","acceptedAnswer":{"@type":"Answer","text":"The City's ChargeYYC page says the road map must be completed by a Professional Engineer licensed in Alberta, so we work alongside an engineer and handle pricing and installation. The program is closed for now; we'll confirm the rules when it reopens."}},
-  {"@type":"Question","name":"What areas do you cover?","acceptedAnswer":{"@type":"Answer","text":"Calgary, Cochrane, Airdrie, Chestermere, Aldersyde, Okotoks and Canmore, Monday to Friday, 7am to 4pm."}}
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Does our building need a new electrical service first?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Often not. A load calculation shows how much spare capacity the building has. Energy management lets several chargers share that capacity, which can delay or shrink a service upgrade."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can one owner install a charger in their own stall?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "In most condos the parkade electrical is common property, so the board has to approve it first. A building-wide plan usually costs less per stall than approving one-off installs."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Who pays for the electricity a charger uses?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "That's a board decision. Networked chargers can track each user's energy so it can be billed back; simpler setups use a flat fee. We explain the options and their costs so the board can choose."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do you write the ChargeYYC road map?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The City's ChargeYYC page says the road map must be completed by a Professional Engineer licensed in Alberta, so we work alongside an engineer and handle pricing and installation. The program is closed for now; we'll confirm the rules when it reopens."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What areas do you cover?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Calgary, Cochrane, Airdrie, Chestermere, Aldersyde, Okotoks and Canmore, Monday to Friday, 7am to 4pm."
+   }
+  }
  ]
 }
 </script>
@@ -356,8 +391,8 @@ form .btn[disabled]{opacity:.6;cursor:wait}
     <h2>How a building project runs</h2>
     <ol class="steps">
       <li><h3>Site assessment</h3><p>We review the electrical room, panel schedules, parkade layout and utility bills.</p></li>
-      <li><h3>Plan and firm price</h3><p>Stall count, phasing and a fixed price, written so the board can read it.</p></li>
-      <li><h3>Board approval</h3><p>We'll join a board meeting or AGM to answer owners' questions, and supply what rebate applications ask for.</p></li>
+      <li><h3>Plan and firm price</h3><p>Stall count, phasing and a firm price for the quoted scope, written in plain language for the board.</p></li>
+      <li><h3>Board approval</h3><p>We'll join a board meeting or AGM to answer owners' questions, and provide the contractor pricing and details rebate applications ask for.</p></li>
       <li><h3>Install and inspection</h3><p>Permitted, inspected and documented, with the parkade kept usable during the work.</p></li>
     </ol>
   </div>
@@ -372,7 +407,7 @@ form .btn[disabled]{opacity:.6;cursor:wait}
         <h3>ChargeYYC (City of Calgary)</h3>
         <p>The pilot paid 50% of EV-ready infrastructure costs (up to $6,000 per stall, $90,000 maximum) and 50% of Level 2 chargers (up to $10,000), to a combined maximum of $100,000 per property. The last intake closed on November 18, 2025, and the City says it expects to take more applications in future.</p>
         <ul>
-          <li>The City's program page says the EV Charging Road Map must be completed by a Professional Engineer licensed in Alberta. We work with engineers and supply pricing and installation.</li>
+          <li>The City's program page says the EV Charging Road Map must be completed by a Professional Engineer licensed in Alberta. We work alongside your engineer: we provide the pricing and do the installation.</li>
           <li>A building that already knows its capacity and stall plan can apply quickly when it reopens.</li>
         </ul>
       </article>
@@ -470,8 +505,8 @@ form .btn[disabled]{opacity:.6;cursor:wait}
   <div class="container">
     <div class="footer-top">
       <div class="footer-brand">
-        <img class="brand-mark" src="/assets/protos-logo.png" alt="Protos Electrical" style="width: min(180px, 42vw);">
-        <p>Family-owned electrical contractor serving Calgary, Cochrane, Airdrie, Chestermere, Aldersyde, Okotoks and Canmore.</p>
+        <img class="brand-mark" loading="lazy" decoding="async" width="480" height="480" src="/assets/protos-logo.png" alt="Protos Electrical" style="width: min(180px, 42vw);">
+        <p>Family-oriented electrical contractor serving Calgary, Cochrane, Airdrie, Chestermere, Aldersyde, Okotoks and Canmore.</p>
         <p><a href="tel:+17808032868">780-803-2868</a><br>Mon–Fri, 7am–4pm</p>
       </div>
       <div class="footer-links-group">
