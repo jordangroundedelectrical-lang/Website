@@ -1,0 +1,39 @@
+name: IndexNow
+
+on:
+  push:
+    branches: [main]
+    paths: ['**.html']
+
+permissions:
+  contents: read
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Submit changed pages to IndexNow
+        shell: bash
+        env:
+          BEFORE: ${{ github.event.before }}
+        run: |
+          set -euo pipefail
+          KEY=11ca298328bd5cb4c9c9cd0c0eb91176
+          # Compare with where main was before this push; fall back to the previous commit
+          if [ -z "$BEFORE" ] || [[ "$BEFORE" =~ ^0+$ ]] || ! git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then
+            BEFORE=$(git rev-parse HEAD~1)
+          fi
+          # Added, copied, modified, renamed and deleted HTML pages, minus 404
+          FILES=$(git -c core.quotepath=off diff --name-only --diff-filter=ACMRD "$BEFORE" HEAD -- '*.html' | grep -vx '404\.html' || true)
+          if [ -z "$FILES" ]; then echo "No HTML pages changed."; exit 0; fi
+          # Map file -> live URL (index.html -> /, page.html -> /page)
+          URLS=$(echo "$FILES" | sed -E 's#^index\.html$##; s#\.html$##' | sed 's#^#https://protoselectrical.ca/#' | jq -R . | jq -s .)
+          echo "$URLS"
+          sleep 120   # let GitHub Pages finish deploying
+          jq -n --argjson u "$URLS" --arg k "$KEY" \
+            '{host:"protoselectrical.ca", key:$k, keyLocation:("https://protoselectrical.ca/"+$k+".txt"), urlList:$u}' \
+            | curl -sS --fail-with-body -X POST https://api.indexnow.org/indexnow \
+                -H 'Content-Type: application/json; charset=utf-8' -d @- -w '\nHTTP %{http_code}\n'
