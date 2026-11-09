@@ -3,13 +3,14 @@
 > Protos Electrical Inc. is a family-oriented electrical contractor serving Calgary, Cochrane, Airdrie, Chestermere, Aldersyde, Okotoks and Canmore. Owned and led by Jordan, Alberta Master Electrician (Cert. #14321); in the trade since 2011. Residential, multi-unit and commercial work.
 
 ## Pages
-- Home EV charger installation: https://protoselectrical.ca/ev-charger-installation
-- Condo and apartment EV charging: https://protoselectrical.ca/condo-ev-charging
-- Load management: https://protoselectrical.ca/load-management
-- Service upgrades: https://protoselectrical.ca/service-upgrades
-- Hot tub wiring: https://protoselectrical.ca/hot-tub-wiring
-- Commercial tenant improvements: https://protoselectrical.ca/tenant-improvements
-- Lutron lighting control: https://protoselectrical.ca/lighting-control
+- [Home](https://protoselectrical.ca/): overview of Protos Electrical, services, credentials, Google reviews and the site-visit request form
+- [Home EV charger installation](https://protoselectrical.ca/ev-charger-installation): Level 2 chargers in Calgary homes and garages, sized to the panel, permitted and inspected
+- [Condo and apartment EV charging](https://protoselectrical.ca/condo-ev-charging): capacity assessment and charging plans for condo boards, apartments and property managers
+- [Load management](https://protoselectrical.ca/load-management): load calculations and EV energy management (EVEMS) to add loads without a service upgrade
+- [Service upgrades](https://protoselectrical.ca/service-upgrades): panel replacements, 100 A to 200 A upgrades and new services, with utility coordination
+- [Hot tub wiring](https://protoselectrical.ca/hot-tub-wiring): dedicated circuits, GFCI protection and disconnects for hot tubs and swim spas
+- [Commercial tenant improvements](https://protoselectrical.ca/tenant-improvements): office, retail and industrial fit-out electrical for GCs, property managers and tenants
+- [Lutron lighting control](https://protoselectrical.ca/lighting-control): Lutron RadioRA and Caseta lighting control for homes and offices
 
 ## Services
 - EV charger installation: home and garage Level 2 chargers, commercial and multi-unit (condo/apartment) charging, panel capacity assessments, permits and inspection
@@ -22,6 +23,7 @@
 - Commercial service: troubleshooting, repairs, lighting upgrades, equipment connections, code compliance
 
 ## How we work
+- Free on-site quotes in Calgary (a service charge may apply outside Calgary)
 - Site visit first; a firm, upfront price is given in person after we've seen the job (no prices or price ranges online or over the phone)
 - Warranty: 2-year warranty on our workmanship and the materials we supply. Full terms and exclusions are written on the quote. Equipment the client buys (e.g. EV chargers) is not covered by our materials warranty.
 - Regular business hours: Monday to Friday, 7am to 4pm (no 24/7 emergency service)
@@ -29,6 +31,7 @@
 ## Credentials
 - Master Electrician-led electrical contractor (Alberta Master Electrician, Cert. #14321)
 - City of Calgary Qualified Trade
+- Owner: Jordan, in the trade since 2011
 - ECAA member; WCB covered; commercial liability insured
 - Lutron certified (RadioRA, Caseta)
 
