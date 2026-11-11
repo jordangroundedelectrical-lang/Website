@@ -11,6 +11,7 @@
 - [Hot tub wiring](https://protoselectrical.ca/hot-tub-wiring): dedicated circuits, GFCI protection and disconnects for hot tubs and swim spas
 - [Commercial tenant improvements](https://protoselectrical.ca/tenant-improvements): office, retail and industrial fit-out electrical for GCs, property managers and tenants
 - [Lutron lighting control](https://protoselectrical.ca/lighting-control): Lutron RadioRA and Caseta lighting control for homes and offices
+- [Battery backup power](https://protoselectrical.ca/backup-power): EcoFlow home battery backup installed to code with a load calculation, electrical permit and inspection
 
 ## Services
 - EV charger installation: home and garage Level 2 chargers, commercial and multi-unit (condo/apartment) charging, panel capacity assessments, permits and inspection
@@ -19,6 +20,7 @@
 - Hot tub and swim spa wiring: dedicated circuits, GFCI disconnects, underground or surface wiring
 - Load management: load calculations and load management systems, including EV energy management (EVEMS), so homes, condos and businesses can add EV chargers, hot tubs and other loads on their existing service and avoid or delay an upgrade
 - Lighting control and home automation: Lutron RadioRA and Caseta systems for homes and offices
+- Battery backup power: EcoFlow power stations and smart home panel installed to code, with a load calculation, electrical permit and inspection
 - Residential service: lighting, outlets, circuits, renovations, basements, troubleshooting
 - Commercial service: troubleshooting, repairs, lighting upgrades, equipment connections, code compliance
 
